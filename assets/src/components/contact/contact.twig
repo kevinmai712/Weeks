@@ -1,0 +1,39 @@
+<header id="contact-header" class="a">
+  <div class="container">
+    <div class="inner">
+      <div class="contactText">
+        <p>{{copy}}</p>
+      </div>
+      <div class="contactInfo">
+        <h2>Let us help you today</h2>
+        {% if address|length %}
+          <p><i class="fas fa-map-marker-alt"></i> {{address}} </p>
+        {% endif %}
+        {% if phone|length %}
+           <a href="tel:{{ phone }}"><i class="fas fa-phone"></i> {{ phone }}</a><br>
+        {% endif %}
+        {% if address2|length %}
+          <p><i class="fas fa-map-marker-alt"></i> {{address2}} </p>
+        {% endif %}
+        {% if phone2|length %}
+           <a href="tel:{{ phone2 }}"><i class="fas fa-phone"></i> {{ phone2 }}</a><br>
+        {% endif %}
+        {% if email|length %}
+          <a href="mailto:{{email}}"><i class="fas fa-envelope"></i> {{email}}</a>
+        {% endif %}
+        {% if hours|length %}
+        <p><i class="fas fa-clock"></i> {{hours}}</p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="form-wrapper">
+      <h2>How Can We Help You</h2>
+      <div class="inner-form">
+        {{ function('do_shortcode', contactForm) }}
+      </div>
+    </div>
+  </div>
+  <div class="gmap-click">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d444175.59140901733!2d-95.53353591126995!3d29.571058989437606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864082c87ad2c87b%3A0x9210129361a625fc!2sWeeks%20Service%20Company!5e0!3m2!1sen!2sus!4v1620234362507!5m2!1sen!2sus"  class="gmap-click" width="100%" height="600" frameborder="0" style="border:0; pointer-events:none;" allowfullscreen=""></iframe>
+  </div>
+</header>

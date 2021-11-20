@@ -1,0 +1,52 @@
+a {
+	@include transition(all $time $ease);
+
+	&,
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+
+/*####################################
+######################################
+3.    SOCIAL MEDIA HEADER STYLE
+######################################
+####################################*/
+.socials-header {
+	@include r(1024px) {
+		display: none;
+	}
+	ul {
+		padding: 0;
+		display: flex;
+		li {
+			list-style: none;
+			margin: 0 6px;
+			transition: .2s ease-in-out;
+			&:hover {
+				transform: translateY(-3px);
+				.fa-facebook-f {
+					color: #4867AA;
+				}
+				.fa-twitter {
+					color: #1DA1F2;
+				}
+				.fa-instagram:before {
+					background: linear-gradient(to right top, #feda75 0, #fa7e1e 20%, #d62976 40%, #962fbf 60%, #4f5bd5 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				.fa-linkedin-in {
+					color: #0077B5;
+				}
+			}
+			i {
+				font-size: 16px;
+				color: $headers;
+				transition: .2s ease-in-out;
+			}
+		}
+	}
+}

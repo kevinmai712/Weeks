@@ -1,0 +1,135 @@
+
+$fieldwidth: 150px;
+
+/*.headerFixed{
+  .contactInfo{
+    bottom: -310px !important;
+  }
+}*/
+
+#jobs-header.a {
+  .container {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px !important;
+    padding-left: 50px !important;
+    @include r(895px){
+        flex-direction: column;
+    }
+    .inner {
+      width: 50%;
+      position:relative;
+      padding-right: 45px;
+      @include r(895px){
+        margin-bottom: 40px;
+        width:100%;
+      }
+      .jobsText{
+        h2{
+          color: $primary;
+          font-weight: 500;
+          font-size: 35px;
+        }
+        ul{
+          color: #1c1a1a;
+          line-height: 1.7em;
+          font-size: 15px;
+        }
+        span{
+            background-color: rgb(198, 198, 198);
+            padding: 5px 10px;
+            font-size: 12px;
+            margin-right: 20px;
+            #job_pindrop{
+                content: "\F3C5";
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 700;
+                color: #007fff;
+                font-size: 1.2em;
+                font-style: normal;
+            }
+        }
+        p{
+          color: $primary;
+        }
+        a{
+          color: $secondary;
+        }
+      }
+    }
+    .form-wrapper {
+      width: 50%;
+      height: 50%;
+      margin-left: 45px;
+      border: 2px solid $secondary;
+      border-radius: 25px;
+      padding: 30px;
+      text-align: center;
+      @include r(895px){
+          width: 90%;
+          margin-left: 0px;
+          display: flex;
+          flex-direction: column;
+          justify-self: center;
+          align-items: center;
+      }
+      h2{
+          color: $secondary;
+          text-align: left;
+          padding-left: 15px;
+      }
+      #job_form{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+            div{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                    span{
+                        width: 50%;
+                        input{
+                            border-radius: 10px;
+                            border: 2px solid $secondary;
+                            padding: 15px;
+                            width: 80%;
+                            margin: 10px;
+                            background-color: #f0f0f0;
+                            color: $secondary;
+                            font-family: "Montserrat";
+                        }
+                        select{
+                            border-radius: 10px;
+                            border: 2px solid $secondary;
+                            padding: 15px;
+                            width: 92%;
+                            margin: 10px;
+                            background-color: #f0f0f0;
+                            color: $secondary;
+                            font-family: "Montserrat";
+                            height: 77%;
+                        }
+                    }
+                }
+            }
+            input[type=submit]{
+                background-color: $secondary;
+                text-transform: uppercase;
+                border-radius: 25px;
+                color: #fff;
+                padding: 5px 20px;
+                border: 0;   
+                margin-left: 70px;
+                font-family: "Montserrat";
+                @include r(895px){
+                }
+            }
+            .wpcf7-form-control::placeholder { /* WebKit browsers */
+                color: $secondary !important;
+                opacity: 1;
+            }
+        }
+  }
+}

@@ -1,0 +1,46 @@
+.error404{
+    #mainheader{
+        background: none !important;
+        &:before{
+            background: none;
+        }
+    }
+    .page-title{
+        display:none;
+    }
+    #calltoaction{
+        display:none;
+    }
+    #content{
+        margin-top: 0;
+    }
+    .wrap404{
+        height: 100vh;
+        background-size: cover;
+        background-position: center;    
+        margin-top: -160px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &:before{
+            @include overlay();
+            background: $primaryGradientOverlay;
+        }
+        .number{
+            color: #fff;
+            font-size: 15em;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        h1{
+            position: relative;
+            color: #fff;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        a{
+            position: relative;
+        }
+    }
+}

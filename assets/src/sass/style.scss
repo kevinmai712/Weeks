@@ -1,0 +1,69 @@
+/*--------------------------------------------------------------
+# Import Modules
+--------------------------------------------------------------*/
+@import '~normalize-scss/sass/normalize/import-now';
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/animations';
+@import 'base/body';
+@import 'base/containers';
+@import 'base/grid';
+@import 'base/spacing';
+@import 'base/wordpress';
+@import 'base/forms';
+
+/*--------------------------------------------------------------
+# Partials
+--------------------------------------------------------------*/
+@import 'partials/typography';
+@import 'partials/buttons';
+@import 'partials/links';
+@import 'partials/colours';
+@import 'partials/helpers';
+@import 'partials/media';
+@import 'partials/popupForm';
+@import 'partials/print';
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import 'components/hamburgerMenu/hamburgerMenu_A';
+@import 'components/headers/header_A';
+@import 'components/hero/hero_A';
+@import 'components/scheduleForm/scheduleForm_A';
+@import 'components/services/services_A';
+@import 'components/about/about_A';
+@import 'components/about/about_B';
+@import 'components/mapSection/mapSection_A';
+@import 'components/blogSpotlight/_blogSpotlight_A';
+@import 'components/couponSelection/couponSelection_B';
+@import 'components/reviews/_reviews_B';
+@import 'components/footer/footer_A';
+@import 'components/sidebar';
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import 'components/singlePost/singlePost';
+@import 'partials/pages/home';
+@import 'partials/pages/blog';
+@import 'partials/pages/contact';
+@import 'partials/pages/about';
+@import 'partials/pages/team';
+@import 'partials/pages/specials';
+@import 'partials/pages/reviews';
+@import 'partials/pages/internal-child';
+@import 'partials/pages/couponsPage';
+@import 'partials/pages/defaultPage';
+@import 'partials/pages/reviewsPage';
+@import 'partials/pages/404';
+@import 'partials/pages/serviceArea';
+@import 'partials/pages/careers';
+@import 'partials/pages/jobs';

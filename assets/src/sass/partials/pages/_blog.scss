@@ -1,0 +1,534 @@
+.featuredBlogSection{
+  width:100%;
+  //height: 40vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  
+  &:before{
+    @include overlay;
+    background-color: $secondaryOverlay;
+  }
+  .inner{
+    padding: 190px 0 250px;
+    position: relative;
+    @include r(600px){
+      padding: 80px 20px;
+    }
+    @include r(375px){
+      padding: 80px 0px;
+    }
+    h1{
+      color: #fff;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .featuredBlogPost{
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 30px 50px;
+      position: absolute;
+      right: -50px;
+      bottom: -150px;
+      width: 500px;
+      @include r(860px){
+        right:0;
+      }
+      @include r(600px){
+        position: relative;
+        right: initial;
+        bottom: initial;
+        width:auto;
+        padding: 20px;
+      }
+      h2{
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 9;
+        color: $primary;
+      }
+      hr{
+        border:0;
+        height: 10px;
+        background-color: $accent;
+        width: 150px;
+        margin-left: 0;
+        position: absolute;
+        top: 60px;
+        @include r(600px){
+          top:40px;
+        }
+      }
+      .postDate{
+        position: absolute;
+        right:0;
+        color:#fff;
+        background-color: $secondary;
+        top: 50px;
+        padding: 5px 20px;
+        border-radius: 20px 0 0 20px;
+        @include r(600px){
+          top:30px;
+        }
+        @include r(375px){
+          position: initial;
+          border-radius: 20px;
+        }
+      }
+      h3{
+        color: $primary;
+        font-weight: 500;
+      }
+      p{
+        font-size: 0.8em;
+      }
+      .postLink{
+        color: #fff;
+        padding: 5px 20px;
+        background-color: $accent;
+        text-transform: uppercase;
+        border-radius: 20px;
+        font-size: 0.9em;
+        &:hover{
+          background-color: $accentOverlay;
+        }
+      }
+    }
+  }
+}
+.blog-container{
+  #main{
+    .featuredPosts{
+      margin-top: 250px;
+      margin-bottom: 30px;
+      @include r(600px){
+        margin: 40px 0;
+      }
+      .featuredPostsHeader{
+        position: relative;
+        h2{
+          font-weight: 500;
+          text-transform: uppercase;
+          position: relative;
+          z-index: 9;
+          color: $primary;
+        }
+        .lastestPostsLine{
+          border:0;
+          height: 10px;
+          background-color: $accent;
+          width: 220px;
+          margin-left: 0;
+          position: absolute;
+          top: 10px;
+        }
+      }
+      .innerPosts{
+        display: flex;
+        justify-content: space-between;
+        @include r(600px){
+          flex-direction: column;
+        }
+        .featuredPost{
+          width:32%;
+          @include r(600px){
+            width: auto;
+            margin: 20px 0;
+          }
+
+          .postThumbnail{
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            display:flex;
+            align-items: flex-end;
+            border-radius: 10px;
+            padding: 0 20px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            &:before{
+              @include overlay;
+              background-color: rgba(0,0,0,0.4);
+              border-radius: 10px;
+              transition: all ease 0.2s;
+            }
+            &:hover{
+              &:before{
+                background-color: rgba(54,104,151,0.8);
+                transition: all ease 0.2s;
+              }
+            }
+            .postContent{
+              position: relative;
+              padding-bottom: 20px;
+              h4{
+                color: #fff;
+                font-weight: 500;
+                text-shadow: 0 0 5px rgba(0,0,0,0.8);
+                margin-bottom: 10px;
+              }
+              hr{
+                width: 50px;
+                margin-left: 0;
+                border:0;
+                height:3px;
+                background-color: $accent;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+.newsletterSection{
+  position: relative;
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+  &:before{
+    content:'';
+    background: $secondaryOverlay;
+    display:block;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+  }
+  .inner{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    @include r(860px){
+      flex-direction: column;
+    }
+    .leftSection{
+      background-color: #fff;
+      padding: 20px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      @include r(600px){
+        padding: 20px;
+      } 
+      h2{
+        color: $accent;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      form{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include r(600px){
+          flex-direction: column;
+        }
+      }
+      input[type=email], input[type=text]{
+        background-color: $light-grey;
+        border:0;
+        padding: 5px 10px;
+        border-radius: 5px;
+        width:95%;
+        @include r(600px){
+          width:93%;
+        }
+      }
+      
+      .first-name, .last-name{
+        width:48%;
+        margin-bottom: 20px;
+        @include r(600px){
+          width:100%;
+        }
+      }
+      .your-email{
+        width:100%;
+        @include r(600px){
+          width:100%;
+        }
+        input[type=email]{
+          width:98%;
+          @include r(600px){
+            width:93%;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      input[type=submit]{
+        margin: 20px auto;
+        padding: 5px 30px;        
+        font-family: "Montserrat";
+        @include r(600px){
+          margin: auto;
+        }
+
+      }
+    }
+    .rightSection{
+      padding-left: 50px;
+      @include r(600px){
+        padding-left:0;
+      }
+      h2{
+        color: #fff;
+        font-weight: 400;
+      }
+      p{
+        color: #fff;
+      }
+
+    }
+  }
+}
+
+.recentPostsContainer{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .recentPostsInner{
+    .recentPostsHeader{
+      position: relative;
+      h2{
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 9;
+        color: $primary;
+      }
+      .lastestPostsLine{
+        border:0;
+        height: 10px;
+        background-color: $accent;
+        width: 180px;
+        margin-left: 0;
+        position: absolute;
+        top: 10px;
+      }
+      a{
+        position: absolute;
+        right:0;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $primary;
+        top: 0;
+        z-index: 99;
+      }
+    }
+    .recentPosts{
+      display: flex;
+      justify-content: space-between;
+      @include r(600px){
+        flex-wrap: wrap;
+      }
+      .recentPost{
+        width:32%;
+        @include r(600px){
+          width:100%;
+          margin-bottom: 20px;
+        }
+
+        .postThumbnail{
+          height: 250px;
+          background-size: cover;
+          background-position: center;
+          display:flex;
+          align-items: flex-end;
+          border-radius: 10px;
+          padding: 0 20px;
+          position: relative;
+          box-shadow: 0 0 15px rgba(0,0,0,0.4);
+          &:before{
+            @include overlay;
+            background-color: rgba(0,0,0,0.4);
+            border-radius: 10px;
+            transition: all ease 0.2s;
+          }
+          &:hover{
+            &:before{
+              background-color: rgba(54,104,151,0.8);
+              transition: all ease 0.2s;
+            }
+          }
+          .postContent{
+            position: relative;
+            padding-bottom: 20px;
+            h4{
+              color: #fff;
+              font-weight: 500;
+              text-shadow: 0 0 5px rgba(0,0,0,0.8);
+              margin-bottom: 10px;
+            }
+            hr{
+              width: 50px;
+              margin-left: 0;
+              border:0;
+              height:3px;
+              background-color: $accent;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.allBlogs{
+  margin: 150px auto;
+  @include r(600px){
+    margin-top: 50px;
+  }
+  .search{
+    padding-bottom: 30px;
+    h2{
+      text-transform: uppercase;
+      color: $primary;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+    input[type=search], input[type=text]{
+      border-radius: 20px;
+      background-color:#dedede;
+      padding: 5px 10px;
+      border: 0;
+      -webkit-appearance: none;
+      outline: none;
+    }
+    input[type=submit]{
+      border-radius: 20px; 
+      background-color: $accent;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      border:0;
+      font-size: 0.9em;
+    }
+  }
+  .innerPosts{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .post{
+      width: 22%;
+      padding: 10px 0px 10px 0px;
+      @include r(600px){
+        width:100%;
+      }
+      .postThumbnail{
+        height: 270px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display:flex;
+        align-items: flex-end;
+        &:before{
+          @include overlay;
+          background-color: rgba(0,0,0,0.4);
+          border-radius: 10px;
+          transition: all ease 0.2s;
+        }
+        &:hover{
+          &:before{
+            background-color: rgba(54,104,151,0.8);
+            transition: all ease 0.2s;
+          }
+        }
+        .postContent{
+          position: relative;
+          padding:20px;
+          h4{
+            color: #fff;
+            font-weight: 500;
+            text-shadow: 0 0 5px rgba(0,0,0,0.8);
+            font-size: 0.9em;
+            margin-bottom: 10px;
+          }
+          hr{
+            height:3px;
+            border:0;
+            background-color: $accent;
+            width: 80px;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search{
+  #content{
+    .post{
+      border-bottom: 1px solid #dedede;
+      padding: 50px 0;
+    }
+    .page-title{
+      font-size: 1.4em;
+      text-transform: uppercase;
+      color: $primary;
+      text-align: center;
+    }
+    .entry-title{
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 1.1em;
+      a{
+        color: $primary;
+      }
+    }
+    .entry-content{
+      font-size: 1.0em;
+      color: $primary;
+      a{
+        color: $primary;
+      }
+    }
+
+
+    .posted-on{
+      background-color: $secondary;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.7em;
+      a{
+        color: #fff;
+      }
+    }
+    .entry-footer{
+      .comments-link{
+        display:none;
+      }
+      .cat-links{
+        display:none;
+      }
+    }
+  }
+  .no-results{
+    text-align: center;
+    .search-form{
+      text-align: center;
+      input[type=search]{
+        background-color: #dedede;
+        border-radius: 20px;
+        border:0;
+        padding:5px 10px;
+      }
+      input[type=submit]{
+        background-color: $secondary;
+        border-radius:20px;
+        border:0;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 5px 20px;
+      }
+    }
+  }
+}

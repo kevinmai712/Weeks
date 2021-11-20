@@ -1,0 +1,120 @@
+#coupons {
+  .container {
+    padding: 0;
+    .inner {
+      @include r(1280px) {
+        padding: 0 0 0 75px;
+      }
+      @include r(860px) {
+        padding: 0;
+      }
+      .coupon-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 10px;
+        text-align: center;
+        @include r(1280px) {
+          overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
+        }
+        @include r(600px) {
+          padding-left: 0;
+        }
+        .coupon-card {
+          position: relative;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          border: 2px $secondary dashed;
+          width: 30%;
+          height: 275px;
+          min-width: 325px;
+          transition: .3s ease-in-out;
+          @include r(1280px) {
+            margin: 25px;
+            width: 325px;
+            height: 275px;
+          }
+          @include r(600px) {
+            &:nth-child(1) {
+              margin-left: 10px;
+              margin-right: 15px;
+            }
+          }
+           .offer {
+             color: $primary;
+            h3 {
+              font-size: 52px;
+              font-weight: 700;
+              margin: 15px 0;
+            }
+            h5 {
+              margin: 0;
+              font-weight: 600;
+              font-size: 22px;
+            }
+           }
+           p {
+             color: $primary;
+             font-size: 10px;
+             font-weight: 700;
+             margin-bottom: 50px;
+           }
+           .btn-row {
+             position: absolute;
+             bottom: 25px;
+             a {
+                color: $accent;
+                font-size: 16px;
+             }
+           }
+           &:hover {
+             background: $accent;
+             border: 2px $white dashed;
+             transform: scale(1.05);
+               a {
+                  color: $primary;
+             }
+           }
+        }
+      }
+      .coupons-message {
+        text-align: center;
+        h4 {
+          font-size: 34px;
+          color: $headers;
+          line-height: 40px;
+        }
+        p {
+          color: $text;
+          width: 50%;
+          margin: 15px auto;
+          @include r(600px) {
+            width: 95%;
+            margin: 0;
+          }
+        }
+        .btn-row {
+          margin-top: 50px;
+          display: flex;
+          justify-content: center;
+          a {
+            background: $accent;
+            font-size: 16px;
+            color: #fff;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            width: 175px;
+            align-items: center;
+            position: relative;
+            &:hover {
+              background: darken($accent, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

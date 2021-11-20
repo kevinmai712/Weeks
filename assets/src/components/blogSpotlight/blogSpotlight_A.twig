@@ -1,0 +1,26 @@
+<section id="blog-spotlight" style="/*background: url({{svg}})*/">
+  <div class="container">
+    <div class="inner">
+      <div class="content-left">
+        <h2>Check out our most recent blog</h2>
+        <p>Check out helpful tips and advice form our blog. When you realize your in over your head, we’ll be ready for your call. Maybe we could say that a nicer way.</p>
+        <div class="btn-row">
+            <a href="#">All Blogs</a>
+        </div>
+      </div>
+      <div class="lastest-post">
+        <div class="blog-card">
+            <article>
+                <div class="img-container">
+                  <img src="{{post.thumbnail}}" alt="post thumbnail">
+                </div>
+                <h2 class="headline">{{post.title}}</h2>
+                <div class="content">
+                    <p>{{post.preview.length(24).force.read_more("<i class='far fa-arrow-right'></i>")}}</p>
+                </div>
+            </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<section id="couponsPage">
+  <div class="container">
+    <div class="inner">
+    <h2>Current Offers</h2>
+    <hr>
+    <div class="couponIntro">
+          {{copy}}
+    </div>
+
+    </div>
+    <div class="coupons">
+    {% for post in coupons %}
+      <div class="coupon">
+        <span class="offer">{{post.offer}}</span>
+        <br>
+        <span class="couponType">{{post.type}}</span>
+      </div>
+      {% if post.type == "Plumbing Repair" %}
+      <style>
+        div.coupon{
+          background-image: url({{ url }}/assets/dist/images/coupons/coupon1.png);
+        }
+      </style>
+      {% elseif post.type == "Water Heater" %}
+      <style>
+        .coupon{
+          background-image: url({{ url }}/assets/dist/images/coupons/coupon2.png);
+        }
+      </style>
+      {% elseif post.type == "Drain Cleaning" %}
+      <style>
+        .coupon{
+          background-image: url({{ url }}/assets/dist/images/coupons/coupon3.png);
+        }
+      </style>
+          {% elseif post.type == "A/C Tune-Up" %}
+      <style>
+        .coupon{
+          background-image: url({{ url }}/assets/dist/images/coupons/AC.png);
+        }
+      </style>
+      {% endif %}
+
+      
+    {% endfor %}
+    </div>
+
+    <div class="disclaimer">
+      {{disclaimer}}
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,77 @@
+#mapSection.a{
+  background-size: cover;
+//  .container{
+    .inner{
+      .about_text{
+        padding: 35px;
+        flex: 1 0 0;
+        @include r(860px){
+          padding: 50px;
+        }
+        @include r(600px){
+          padding: 25px 50px 50px 50px;
+        }
+        h1,h2,h3,h4,h5{
+          text-transform: uppercase;
+          font-weight: 300;
+          color: $primary;
+          border-bottom: 2px solid $accent;
+          display:inline-block;
+          padding-bottom: 10px;
+          font-size: 1.7em;
+          line-height: 145%;
+          @include r(600px){
+            font-size: 1.6em;
+          }
+        }
+        .two-column{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+        p, li{
+          color: $primary;
+          a{
+            text-decoration: none;
+            color: $primary;
+          }
+        }
+      }
+      .locations_wrap{
+        display:flex;
+        justify-content: space-between;
+        .map{
+          height: 70vh;
+          flex: 1 0 0;
+          @include r(600px){
+            display:none;
+          }
+          iframe{
+            height:100%;
+            width:100%;
+          }
+        }
+        .location_list{
+          h3{
+            text-transform: uppercase;
+            font-weight: 300;
+            color: $primary;
+            font-size: 2em;
+          }
+          ul{
+            li{
+              list-style: none;
+              text-transform: uppercase;
+              color: $primary;
+              i{
+                color: $accent;
+              }
+
+            }
+          }
+        }
+      }
+
+    }
+  //}
+}

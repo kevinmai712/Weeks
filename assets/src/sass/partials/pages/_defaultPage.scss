@@ -1,0 +1,279 @@
+.defaultPage{
+.inner{
+  width:100%;
+}
+  .pageHeading{
+    padding: 50px 60px 70px;
+    background-color: #fff;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    width: auto;
+    a{
+      text-decoration: none;
+      color: $secondary;
+    }
+    @include r(600px){
+      padding: 40px;
+    }
+    @include r(375px){
+      padding: 15px;
+    }
+    h1{
+      font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0;
+    color: $primary;
+    }
+  h2, h3{
+    text-transform: uppercase;
+    color: $primary;
+    font-weight: 600;
+  }
+  h4{
+    text-transform: uppercase;
+    color: $primary;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  p{
+    color: $primary;
+    em{
+      a{
+        text-decoration: none;
+        color: $secondary;
+      }
+    }
+  }
+  ol{
+    li{
+      color: $primary;
+    }
+  }
+  ul{
+    color: $primary;
+    li{
+      color: $primary;
+      a{
+        color: $primary;
+      }
+    }
+  }
+  a{
+    text-decoration: none;
+    color: $secondary;
+  }
+  .scheduleBtn{
+    a{
+      background-color: $secondary;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      border-radius: 50px;
+      &:hover{
+        background-color: $accentOverlay;
+      }
+    }
+  }
+  }
+  .pageSubheading{
+    display:flex;
+    position: relative;
+    margin-bottom: 50px;
+    @include r(1024px){
+      flex-direction: column;
+    }
+
+    .pageImage{
+      height: 500px;
+      width: 90%;
+      background-size: cover !important;
+      border-radius: 20px;
+      background-position: center !important;
+      @include r(1024px){
+        margin-bottom: 50px;
+        width: 100% !important;
+        height:250px;
+      }
+    }
+    .subheadingText{
+      width: 55%;
+      position: absolute;
+      right: 0px;
+      top: 50px;
+      background-color: $secondary;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.2);     
+      @include r(600px){
+        position: initial;
+        width: auto;
+        margin-top: 20px;
+      }
+      @include r(375px){
+        padding: 20px;
+      }
+      h1, h2, h3, h4, h5{
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1.4em;
+      }
+      p{
+        color: #fff;
+        a{
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+      ul{
+        color: #fff;
+        li{
+          color: #fff;
+        }
+      }
+    }
+    div.subheadingText{
+      @include r(1280px){
+        width:80%;
+      }
+      @include r(1024px){
+        position: initial; 
+        width:auto;
+      }
+    }
+  }
+  .pageContent{
+    padding: 10px 0;
+    .entry-header{
+      display:none;
+    }
+    h1, h2, h3, h4, h5{
+      color: $primary;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    h1, h2{
+      font-size: 1.4em;
+    }
+    h3{
+      font-size: 1.2em;
+    }
+    h4{
+      font-size: 1.1em;
+    }
+    p{
+      color: $primary;
+      a{
+        text-decoration: none;
+        color: $secondary;
+      }
+    }
+    .featured-columns{
+      width: 100%;
+      ul{
+        display: flex;
+        flex-direction: row;
+        padding-inline-start: 0em;
+        @include r(600px){
+          flex-direction: column;
+        }
+        li{
+          list-style: none;
+          text-align: center;
+          margin: 0 auto;
+          padding: 30px;
+        }
+      }
+    }
+
+    .special-columns{
+      width: 100%;
+      ul{
+        display: flex;
+        flex-direction: row;
+        padding-inline-start: 0em;
+        @include r(600px){
+          flex-direction: column;
+        }
+        li{
+          list-style: none;
+          width: 35%;
+          text-align: center;
+          margin: 0 auto;      
+            @include r(600px){
+              width: 100%;
+          }
+          img{
+            width: 75%;
+          }
+        }
+      }
+    }
+
+    ul{
+      color: $primary;
+      line-height: 200%;
+      li{
+  
+      }
+    }
+    ol{
+      color: $primary;
+      line-height: 200%;
+    }
+    a{
+      text-decoration: none;
+      color: $primary;
+    }
+    .team-member{
+      -webkit-display: flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .team-member-wrapper{
+        -webkit-flex-basis: 33%;
+        flex-basis: 33%;
+        margin: 0 0 20px;
+        img{
+          box-shadow: none;
+          display: block;
+          margin: 0 auto 10px;
+        }
+        p{
+          margin: 0;
+          text-align: center;
+          .member-name{
+            font-weight: 700;
+            line-height: 100%;
+            font-size: 1.3em;
+          }
+          .member-title{
+            margin: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+.page-template-default{
+  .page-title{
+    background-position: center !important;
+  }
+}
+
+.defaultPage.defaultChild{
+  .pageImage{
+    display:none;
+  }
+  .subheadingText{
+    position: relative;
+    width: auto;
+  }
+  .pageHeading{
+    margin-bottom: 0;
+  }
+}

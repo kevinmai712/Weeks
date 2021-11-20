@@ -1,0 +1,13 @@
+body {
+	background-color: $light-grey;
+}
+
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
+.noscroll{
+    overflow:hidden;
+    position: relative;
+    height:100vh;
+}

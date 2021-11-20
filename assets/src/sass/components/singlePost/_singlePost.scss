@@ -1,0 +1,253 @@
+.single{
+  #thumbnail-background{
+    position: relative;;
+    &:before{
+      @include overlay;
+      background:linear-gradient( rgba(0,0,0,0.2), rgba(0,0,0,0.2), rgba(0,0,0,0));
+    }
+  }
+}
+.single-container {
+  margin: -200px auto 250px;
+  padding-top: 50px;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  @include r(860px){
+    margin-bottom: 50px;
+  }
+  .singles-header {
+    margin: 0px 0 100px 0;
+    @include r(860px){
+      margin-bottom: 20px;
+    }
+      .blog-back {
+        font-size: 14px;
+      }
+      .post-info {
+         text-align: center;
+         margin: 0 auto;
+         .back{
+           background-color: $accent;
+           color: #fff;
+           font-size: 1.8em;
+           position: absolute;
+           left: -20px;
+           border-radius: 10px;
+           padding: 15px 20px;
+           @include r(860px){
+             background:none;
+             color: $accent;
+             top:10px;
+             left:10px;
+           }
+         }
+        .singles-title {
+          font-size: 2.5em;
+          text-transform: uppercase;
+          text-align: left;
+          font-weight: 400;
+          margin-bottom: 0;
+          color: $headers;
+          @include r(860px){
+            font-size: 1.6em;
+          }
+        }
+        .author{
+          text-align: left;
+          font-weight: 500;
+          color: $secondary;
+        }
+        hr{
+          height: 3px;
+          border:0;
+          background-color: $accent;
+          width: 50px;
+          margin-left: 0;
+        }
+        .postDate{
+          position: absolute;
+          right:0;
+          top: 50px;
+          background-color: $secondary;
+          border-radius: 20px 0 0 20px;
+          padding: 5px 20px;
+          color: #fff;
+          @include r(860px){
+            top:20px;
+          }
+        }
+      }
+  }
+  .singles-content {
+    margin: 40px auto;
+    a {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+    blockquote {
+      font-style: italic;
+      padding: 40px;
+      background: #202020;
+      position: relative;
+      &:after {
+        content: '❝';
+        position: absolute;
+        color: $accent;
+        top: 80px;
+        left: 80px;
+        font-size: 5rem;
+        letter-spacing: 3rem;
+      }
+      p {
+        color: #fff !important;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      span {
+        font-style: normal;
+        display: block;
+        font-weight: 600;
+        margin-top: 25px;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+    .break-line {
+      height: 4px;
+      background: $accent;
+      width: 150px;
+      margin: 20px auto;
+      display: block;
+    }
+    h4 {
+      //width: 65%;
+      margin: 3em auto;
+      font-weight: 600;
+      color: $headers;
+      font-size: 1.05rem;
+      line-height: 2rem;
+    }
+    p {
+      //width: 65%;
+      margin: 3em auto;
+      font-weight: 400;
+      color: $text;
+      font-size: 1.05rem;
+      line-height: 2rem;
+    }
+    .image-container {
+      position: relative;
+      height: 700px;
+      width: 100%;
+      overflow: hidden;
+      margin: 50px auto;
+      img {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    ul {
+      //width: 65%;
+      margin: 3em auto;
+      li {
+        font-weight: 400;
+        color: $text;
+        font-size: 1.05rem;
+        line-height: 2rem;
+        list-style: circle;
+      }
+    }
+  }
+  .navigation{
+    .nav-links{
+      display:flex;
+      justify-content: space-between;
+      padding: 40px 0;
+      .nav-previous{
+        a{
+          padding: 5px 15px;
+          border:1px solid $secondary;
+          color: $secondary;
+          text-transform: uppercase;
+          border-radius: 20px;
+          font-size: 0.8em;
+          font-weight: 500;
+          @include r(600px){
+            display:block;
+            width:75%;
+          }
+
+          &:hover{
+            background-color: $secondary;
+            color: #fff;
+            transition: all ease 0.3s;
+          }
+          &:before{
+            content:'\f355';
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+            margin-right: 10px;
+          }
+        }
+      }
+      .nav-next{
+        a{
+          padding: 5px 15px;
+          border:1px solid $secondary;
+          color: $secondary;
+          text-transform: uppercase;
+          border-radius: 20px;
+          font-size: 0.8em;
+          font-weight: 500;
+          @include r(600px){
+            display:block;
+            width:75%;
+          }
+
+          &:hover{
+            background-color: $secondary;
+            color: #fff;
+            transition: all ease 0.3s;
+          }
+          &:after{
+            content:'\f356';
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+#thumbnail-background {
+  height: 700px;
+  width: 100%;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  @include r(860px){
+    height:450px;
+  }
+}
+
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}

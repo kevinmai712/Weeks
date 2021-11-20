@@ -1,0 +1,49 @@
+.removed-margin {
+  margin-top: 0 !important;
+}
+#content {
+  margin-top: 65px;
+}
+.home{
+  #content{
+    margin-top:0;
+  }
+}
+
+/* FIX FOR JUMPING PAGE CONTENT ON HEADER FIXED */
+div.headerFixed#content{
+  margin-top: 170px !important;
+}
+.page-template-default, .page-template-coupons{
+  div.headerFixed#content{
+    margin-top: 245px !important;
+    @include r(600px){
+      margin-top: 65px !important;
+    }
+  }
+}
+.page-template-contact{
+  div.headerFixed#content{
+    margin-top: 180px !important;
+    @include r(600px){
+      margin-top:65px !important;
+    }
+  }
+
+}
+.home{
+  div.headerFixed#content{
+    margin-top: 70px !important;
+  }
+}
+
+.blog, .single{
+  #content{
+    margin-top: -130px !important;
+  }
+}
+.search{
+  .content-area{
+    padding-bottom: 80px;
+  }
+}

@@ -1,0 +1,112 @@
+#scheduleForm{
+  background-color: $primary;
+  margin-top: -30px;
+  padding: 10px 0 30px 0;
+  position: relative;
+  @include r(600px){
+    display:none;
+  }
+  h5{
+    color: $accent;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 0.2em;
+    @include r(600px){
+      display:none;
+    }
+  }
+  .form{
+    @include r(600px){
+      display:none;
+
+      &.visible{
+        display:block;
+      }
+    }
+    #schedule-emergency{
+      color: #fff;
+    }
+    div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+      background-color: $accent;
+      border:0;
+      width:auto;
+      padding:10px 15px;
+      color: #fff;
+      font-weight: 600;
+    }
+    div.wpcf7-mail-sent-ok{
+      background-color: #398f14;
+      border:0;
+      width:auto;
+      padding:10px 15px;
+      color: #fff;
+      font-weight: 600;
+    }
+    form{
+      .formInner{
+      display: flex;
+      justify-content: space-between;
+      @include r(600px){
+        flex-direction: column;
+      }
+        label{
+          span{
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.8em;
+          }
+        }
+        input[type="text"], input[type="email"], select{
+          width: 90%;
+          background-color: rgba(255,255,255,0.3);
+          padding: 10px 10px;
+          -webkit-appearance: none;
+          border: none;
+          border-radius: 5px;
+          color: #132434;
+          transition: all ease 0.3s;
+          &::placeholder{
+            color: #93B7D8;
+          }
+          &:focus{
+            background-color: rgba( 255,255,255,0.6);
+            transition: all ease 0.3s;
+          }
+          &:focus::placeholder{
+            color: #132434;
+          }
+        }
+        .service:after{
+          content:'\f0d7';
+          font-family: "Font Awesome 5 Pro";
+          font-weight: 900;
+          position: absolute;
+          right:10px;
+          top: 0px;
+        }
+        input[type="submit"]{
+          background-color: $secondary;
+          color: #fff;
+          text-transform: uppercase;
+          padding: 10px 25px;
+          -webkit-appearance: none;
+          border:none;
+          height:40px;
+          border-radius: 5px;
+          margin-top: auto;
+          @include r(600px){
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  .scheduleBtn-mobile{
+    text-align: center; 
+    margin-top: 15px;
+    @media screen and (min-width: 601px){
+     display:none;
+    }
+   }
+}

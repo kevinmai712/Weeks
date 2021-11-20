@@ -1,0 +1,112 @@
+#reviews.b{
+  padding: 100px;
+  background-size: cover;
+  position: relative;
+  @include r(860px){
+    padding: 60px 15px;
+  }
+  &:before{
+    @include overlay();
+    background: $secondaryOverlay;
+  }
+  .container{
+    position: relative;
+    .inner{
+      display:flex;
+      justify-content: space-between;
+      .leftSide{
+        flex: 1 0 0;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        @include r(768px){
+          display: none;
+        }
+        h2{
+          color:#fff;
+          border-bottom: 2px solid $secondary;
+          display:inline-block;
+          font-weight: 400;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+          font-size: 2em;
+          width: 50%;
+          @include r(600px){
+            line-height: 100%;
+            width: 100%;
+            text-align: center;
+          }
+        }
+        a{
+          
+        }
+        .buttonstyle{
+          background-color:$secondary;
+          text-transform: uppercase;
+          border-radius: 20px;
+          border: 0;
+          color: #fff;
+          padding: 10px 15px;
+          margin-top: 10px;
+          position: relative;
+          top: 15px;
+          width: 45%;
+          text-align: center;
+          &:hover{
+            background-color: $primary;
+          }
+          @include r(600px){
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+          }
+        }
+      }
+      .rightSide{
+        flex: 1 0 0;
+        .card{
+          background-color: #fff;
+          padding: 20px 0px 0px 20px;
+          border-radius: 5px;
+          height: 100%;
+          width: 100%;
+          box-shadow: 0 0 10px rgba(0,0,0,0.3);
+          @include r(768px){
+            width: auto;
+          }
+          &:before{
+            content:'\f10d';
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 900;
+            font-size: 2em;
+            color: $primary;
+          }
+          .description{
+            color: $primary;
+            padding: 10px 30px;
+          }
+          .name{
+            color: $accent;
+            padding: 10px 30px;
+          }
+          .buttonstyle{
+            background-color:$secondary;
+            text-transform: uppercase;
+            border-radius: 0px;
+            float: right;
+            border: 0;
+            color: #fff;
+            padding: 10px 15px;
+            margin-top: 0px;
+            position: relative;
+            top: 20px;
+            width: 45%;
+            bottom: 0px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

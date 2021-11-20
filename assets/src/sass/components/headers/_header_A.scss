@@ -1,0 +1,714 @@
+/*
+
+Fragment headers
+
+Uses the # I labeled to easily find the starting css of each header
+
+1. Navigation style 1  (navbar_opt1)
+2. Navigation style 2 (navbar_opt2)
+3. Navigation social media style (socials-header)
+
+*/
+
+#mainheader {
+	z-index: 300;
+	position: relative;
+	/*####################################
+	######################################
+	3. Navigation Volume 1
+		. Includes Slideout menu on desktop
+		. Make sure to call the slideout twig file
+	######################################
+	####################################*/
+	#nav.a {
+		height: 50px;
+		padding-top: 30px;
+
+		.inner{
+			width: 95%;
+			margin:auto;
+			/*@include r(1280px){
+				width: 1100px;
+			}
+			@include r(1140px){
+				width:900px;
+			}
+			@include r(860px){
+				width: 650px;
+			}*/
+			@include r(600px){
+				width: auto;
+			}
+			.details-holder{
+				display:flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				@include r(860px){
+					justify-content: center;
+				}
+				@include r(600px){
+					justify-content: space-between;
+				}
+				.logo-wrapper{
+					position: relative;
+					z-index: 99;
+					@include r(1280px){
+						width:200px;
+					}
+					@include r(1140px){
+						width:150px;
+					}
+					@include r(600px){
+						padding-top: 20px;
+						padding-left: 20px;
+					}
+					img{
+						width:175px;
+						@include r(1140px){
+							width:150px;
+						}
+						@include r(600px){
+							width: 150px;
+						}
+
+
+					}
+				}
+				#menu-selection{
+					width: 65%;
+					@include r(1365px){
+						width: 60%;
+					}
+					@include r(1031px){
+						width: 65%;
+					}
+					@include r(895px){
+						width: 70%;
+					}
+					@include r(600px){
+						display:none;
+					}
+					.nav-main{
+						display: flex;
+						justify-content: space-between;
+						padding-left: 0;
+						.nav-main-item{
+							list-style-type: none;
+							@include r(860px){
+								text-align: left;
+							}
+							&.current-menu-item{
+								border-bottom: 3px solid $accent;
+								position: relative;
+							}
+							.nav-main-link{
+								color:#fff;
+								text-transform: uppercase;
+								transition: color ease 0.3s;
+								text-shadow: 0 0 5px rgba(0,0,0,0.2);
+								position: relative;
+								font-weight: 400;
+								font-size: 0.8em;
+								@include r(875px){
+									font-size: .65em;
+									text-align: center;
+								}
+								&:hover{
+									color: $accent;
+									transition: color ease 0.3s;
+									text-shadow: 0 0 5px rgba(0,0,0,0);
+								}
+								&:after{
+									content:'';
+									position: absolute;
+									bottom:-5px;
+									background-color: $accent;
+									height:0px;
+									left:0;
+									width:100%;
+									@include transition(all ease 0.2s);
+									z-index: 99;
+
+								}
+								&:hover:after{
+									height:3px;
+									@include transition(all ease 0.2s);
+								}
+
+							}
+							&.menu-item-has-children{
+								position: relative;
+								&:after{
+									content: '\f107';
+									font-family: "Font Awesome 5 Pro";
+									color:#fff;
+									@include r(860px){
+										position: relative;
+										margin-left: 10px;
+									}
+								}
+								.nav-drop{
+									visibility: hidden;
+									opacity: 0;
+									position:absolute;
+									left: -20px;
+									top: 0px;
+									background: linear-gradient(180deg, rgba(255,255,255,0),rgba(255,255,255,0.2),rgba(255,255,255,0.4));
+									box-shadow: 0px 10px 5px rgba(255,255,255,0.4);
+									border-radius: 0 0 10px 10px;
+									padding-left: 20px;
+									padding-top: 20px;
+									z-index: 999;
+									//transition: visibility ease 0.2s;
+									transition: all ease 0.3s;
+									@include r(860px){
+										top: 60px;
+									}
+									.nav-drop-item{
+										list-style-type: none;
+										font-size: 0.8em;
+										a{
+											color:#fff;
+											transition: color ease 0.3s;
+											text-shadow: 0 0 5px rgba(0,0,0,0.2);
+											font-weight: 400;
+											white-space: nowrap;
+											&:hover{
+												color: $accent;
+												transition: color ease 0.3s;
+												text-shadow: 0 0 5px rgba(0,0,0,0);
+											}
+										}
+									}
+								}
+								&:hover{
+									.nav-drop{
+										//display:block;
+										visibility: visible;
+										opacity: 1;
+										top:60px;
+										width: auto;
+										//transition: visibility ease 0.2s;
+										transition: all ease 0.3s;
+										@include r(860px){
+											top: 80px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.reach{
+					//margin-top:20px;
+					@include r(860px){
+						display:none;
+					}
+					.call{
+						a{
+							background-color: $secondary;
+							border: 2px solid $secondary;
+							border-radius: 25px;
+							padding: 10px 25px;
+							color:#fff;
+							position: relative;
+							overflow:hidden;
+							width:100px;
+
+							&:hover{
+								transition: all ease 0.2s;
+								background: $accentOverlay;
+								span{
+									margin-top: -30px;
+									opacity: 0;
+									transition: all ease 0.1s;
+								}
+							}
+							span{
+								transition: all ease 0.1s;
+								margin-top: 0;
+								opacity: 1;
+								@include r(1031px){
+									display: none;
+								}
+							}
+							&:after{
+								content: 'Call now!';
+								position: absolute;
+								top: 30px;
+								left: 60px;
+								opacity:0;
+								transition: all ease 0.2s;
+							}
+							&:hover:after{
+								top: 8px;
+								opacity: 1;
+								transition: all ease 0.2s;
+							}
+							i{
+
+							}
+						}
+					}
+				}
+				.mobileHamburger{
+					margin-top: 15px;
+					position: relative;
+					margin-right: 20px;
+					@media screen and (min-width:600px){
+						display:none;
+					}
+					span{
+						padding: 15px;
+						i{
+							color:#fff;
+							font-size: 2em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#mobileMenu{
+	background-color: $primary;
+	position: absolute;
+	z-index: 999;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	display:none;
+	padding:20px;
+	transition: all ease 0.3s; 
+
+	&.menuExpanded{
+		display:block;
+
+	}
+	.closeMenu{
+		padding: 20px;
+		position: absolute;
+		right: 20px;
+		top: 25px;
+		i{
+			font-size: 2em;
+			color: #fff;
+		}
+	}
+
+	.nav-main{
+		list-style: none;
+		margin-top: 100px;
+
+		.nav-main-item{
+			padding: 10px 0;
+			margin-right: 35px;
+			//border-top: 1px solid #e0e0e0;
+			position: relative;
+			&.menu-item-has-children{
+				&:after{
+					content:'\f107';
+					position: absolute;
+					right:20px;
+					top:10px;
+					font-family: 'Font Awesome 5 Pro';
+					font-size: 1.5em;
+					color: #fff;
+				}
+			}
+			.nav-main-link{
+				text-transform: uppercase;
+				color: #fff;
+				font-weight: 600;
+				font-size: 1.2em;
+
+			}
+			&.active{
+				.nav-drop{
+					max-height: 600px !important;
+					transition: all ease 0.6s;
+				}
+			}
+			.nav-drop{
+				list-style:none;
+				max-height:0;
+				overflow: hidden;
+				transition: all ease 0.6s;
+				
+				.nav-drop-item{
+					text-indent: -25px;
+					margin-bottom: 10px;
+					margin-top: 10px;
+					a{
+						text-transform: uppercase;
+						color: $accent;
+						font-size: 0.9em;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+	.mobile-social-icons{
+		position: absolute;
+		bottom: 15px;
+		z-index: 10;
+		width: 100%;
+		background-color: $primary;
+		h4{
+			color: #fff;
+			text-transform: uppercase;
+		}
+		ul{
+			padding-left: 0;
+			display:flex;
+			flex-direction: row;
+			li{
+				list-style:none;
+				a{
+					color: #fff;
+					padding: 15px;
+					i{
+						font-size: 1.5em;
+					}
+				}
+			}
+		}
+	}
+}
+#mainheader.fixed{
+	.logo-wrapper{
+		img{
+			width: 150px !important;
+		}
+	}
+	.mobileHamburger{
+		span{
+			i{
+				color: $primary !important;
+			}
+		}
+	}
+}
+.form-open{
+	#mainheader{
+		z-index: 1;
+		//visibility: hidden;
+	}
+}
+
+#mainheader{
+	#nav.a.light{
+		background-color: #fff !important;
+		//padding-top: 10px;
+		padding: 0px 0px 50px 0;
+		width: 100%;
+		//height:90px;
+		@include r(600px){
+			padding-top: 0;
+			padding-bottom: 0;
+			padding: 0px;
+			height: auto;
+		}
+		.logo-wrapper{
+			//top: -50px;
+			width:250px;
+			img{
+				//position: absolute;
+				@include r(600px){
+					position: initial;
+				}
+			}
+			@include r(600px){
+				top:0;
+			}
+		}
+		.nav-main-item{
+			.nav-main-link{
+				color: $primary !important;
+				text-shadow: none !important;
+			}
+			&.menu-item-has-children{
+				.nav-drop{
+					background-color: rgba(255,255,255,0.8) !important;
+					box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4) !important;
+					z-index: 999;
+					padding-top: 50px;
+					width: 150px;
+					padding-bottom: 20px;
+					padding-right: 30px;
+
+					.nav-drop-item{
+						width:100%;
+						a{
+							color: $primary !important;
+						}
+					}
+
+				}
+				&:after{
+					color: $primary !important;
+				}
+				&:hover{
+					.nav-drop{
+						top:70px;
+					}
+				}
+			}
+		}
+		.mobileHamburger{
+			i{
+				color: $secondary !important;
+			}
+		}
+
+	}
+}
+
+
+#mainheader.fixed{
+	div#nav.a{
+		background-color: #fff !important;
+		background-image: none !important;
+		position: fixed;
+		//left: 50%;
+		top:0;
+		//transform: translateX(-50%);
+		width:100%;
+		//height: 70px;
+		padding-top: 0px;
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		padding-bottom: 0;
+		z-index: 9;
+		height: auto;
+		.logo-wrapper{
+			top:0;
+			z-index: 99;
+			position: initial;
+			img{
+				position: initial;
+
+			}
+		}
+		.nav-main{
+			margin-top: 25px;
+			.nav-main-item{
+				a.nav-main-link{
+					color: $primary !important;
+					text-shadow:none;
+				}
+				&.menu-item-has-children{
+					&:after{
+						color: $primary !important;
+					}
+				}
+
+				.nav-drop{
+					background-color: #fff !important;
+					box-shadow: 0 5px 5px rgba(0,0,0,0.2) !important;
+					.nav-drop-item{
+						a{
+							color: $primary !important;
+							font-size: 1.1em;
+						}
+					}
+				}
+				&:hover{
+					.nav-drop{
+						padding-top: 20px;
+						padding-bottom: 20px;
+						top: 43px !important;
+					}
+				}
+			}
+		}
+	}
+	.page-title{
+		visibility: hidden;
+		@include r(600px){
+			visibility: visible !important;
+			margin-top: 85px;
+		}
+	}
+}
+
+.page-template-contact, .page-template-coupons, .page-template-default, 
+.page-template-all-blogs, .search, .error404, .page-template-defaultChild, .page-template-reviews, .page-template-serviceArea{
+	#mainheader{
+		#nav.a{
+			height: auto;
+			background-size: cover !important;
+			padding-bottom: 20px;
+			background-position: center !important;
+			
+		}
+		&:before{
+			@include overlay();
+			background-color: $secondaryOverlay;
+		}
+		.light{
+			position: relative;
+		}
+	}
+	div.page-title{
+		text-align: center;
+		position: relative;
+		padding-bottom: 80px;
+		padding-top:80px;
+		h1{
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 400;
+			position: relative;
+		}
+		background-position: center;
+		background-size: cover;
+
+		&:before{
+			@include overlay();
+			background-color: $secondaryOverlay;
+		}
+	}
+
+}
+
+.page-template-careers, .page-template-jobs{
+	#mainheader{
+		#nav.a{
+			height: auto;
+			background-size: cover !important;
+			padding-bottom: 20px;
+			background-position: center !important;
+			
+		}
+		&:before{
+			@include overlay();
+			background-color: $secondaryOverlay;
+		}
+		.light{
+			position: relative;
+		}
+	}
+	div.page-title{
+		text-align: left;
+		position: relative;
+		padding-bottom: 100px;
+		padding-top: 100px;
+		padding-left: 200px;	
+			@include r(895px){
+				padding-left: 0px;
+				text-align: center;
+		}
+		h1{
+			text-transform: uppercase;
+			color: #fff;
+			font-weight: 400;
+			position: relative;	
+			@include r(895px){
+				padding-left: 0px;
+				text-align: center;
+			}
+		}
+		background-position: center;
+		background-size: cover;
+	}
+
+}
+
+#careers_header_title{
+	display: none;
+}
+
+.page-id-8241 #careers_header_title{
+	display: block;
+	p{
+		color: #fff;
+		width: 40%;  
+		  @include r(895px){
+			width:100%;
+			padding-left: 0px;
+			text-align: center;
+		  }
+	}
+	.jobpopupbtn{
+		background-color: #f03120;
+		text-transform: uppercase;
+		border-radius: 25px;
+		color: #fff;
+		padding: 5px 20px;
+		border: 0;
+		cursor: pointer;  
+		@include r(895px){
+			margin-left: 0px;
+		  }
+	}
+}
+
+.page-id-36 #careers_header_title{
+	display: block;
+	p{
+		color: #fff;
+		width: 40%;
+		  @include r(895px){
+			width:100%;
+			padding-left: 0px;
+			text-align: center;
+		  }
+	}
+	.jobpopupbtn{
+		background-color: #f03120;
+		text-transform: uppercase;
+		border-radius: 25px;
+		color: #fff;
+		padding: 5px 20px;
+		border: 0;
+		cursor: pointer; 
+		@include r(895px){
+			margin-left: 0px;
+		  }
+	}
+}
+
+.page-template-home{
+	div#nav.a{
+		background: none !important;
+	}
+	.page-title{
+		display:none;
+	}
+}
+.blog, .single, .search{
+	.page-title{
+		display:none;
+	}
+}
+.search{
+	#mainheader{
+		div#nav.a{
+			height:80px;
+		}
+	}
+
+	#content{
+		.page-title{
+			display:block;
+		}
+	}
+}
+
+/* BLOG PAGES*/
+.blog, .single{
+	#mainheader{
+		#nav.a{
+			height: auto;
+			background: transparent !important;
+			padding-bottom: 20px;
+		}
+		#nav.light{
+			background:#fff !important; 
+		}
+	}
+}

@@ -1,0 +1,176 @@
+#blog-spotlight {
+  z-index: -3;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  margin-top: -100px;
+  height: 1000px;
+  @include r(1440px) {
+    height: 850px;
+  }
+  @include r(1024px) {
+    margin-top: 0px;
+    background-size: 1800px !important;
+    height: 100%;
+    background-position: center !important;
+  }
+  @include r(600px) {
+    margin-top: 50px;
+    background-size: 450% !important;
+    background-position: center -150px !important;
+
+  }
+  @include r(375px) {
+    margin-top: 100px;
+  }
+  .container {
+    .inner {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+      @include r(1024px) {
+        flex-direction: column;
+      }
+      .content-left {
+      width: 35%;
+      padding: 0 20px;
+      @include r(1024px) {
+        width: 100%;
+        padding: 0 5px;
+      }
+      h2 {
+        padding-right: 20px;
+        font-size: 20px;
+        @include r(600px) {
+          font-size: 26px;
+          line-height: 38px;
+        }
+      }
+      p {
+        font-size: 18px;
+        line-height: 40px;
+        color: $text;
+      }
+      .btn-row {
+        @include r(1024px) {
+          display: none;
+        }
+        margin-top: 50px;
+        a {
+          background: $accent;
+          font-size: 16px;
+          color: #fff;
+          height: 55px;
+          display: flex;
+          justify-content: center;
+          width: 175px;
+          align-items: center;
+          position: relative;
+          &:hover {
+            background: darken($accent, 10%);
+          }
+          i {
+            transition: .2s ease-in-out;
+            font-size: 18px;
+            display: block;
+            height: 55px;
+            line-height: 55px;
+            padding: 0 15px;
+            position: absolute;
+            right: 0;
+            background: lighten($accent, 7%);
+            transform: translateX(40px);
+          }
+        }
+      }
+      }
+      .lastest-post {
+        @include r(600px) {
+          margin-top: 50px;
+        }
+        .blog-card {
+          position: relative;
+          width: 425px;
+          background: $white;
+          box-shadow: 0px 4px 35px 10px #eef2f9;
+          height: 100%;
+          z-index: 4;
+          overflow: hidden;
+          margin: 0 auto;
+          @include r(480px) {
+            width: 100%;
+            margin: 0 auto;
+          }
+          article {
+            .img-container {
+              height: 250px;
+              overflow: hidden;
+              img {
+                background-position: center;
+              }
+            }
+            h2 {
+              width: 90%;
+              padding: 0 0 0 15px;
+              font-size: 20px;
+              color: $headers;
+              @include r(600px) {
+                font-size: 24px;
+                line-height: 36px;
+              }
+            }
+            p {
+              width: 90%;
+              padding: 0 0 0 15px;
+              color: $text;
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 30px;
+              margin-bottom: 75px;
+              @include r(600px) {
+                font-size: 18px;
+                line-height: 36px;
+              }
+            }
+            .read-more {
+              display: block;
+              position: absolute;
+              color: $white;
+              bottom: 0;
+              background: $secondary;
+              height: 75px;
+              width: 75px;
+              font-size: 18px;
+              float: right;
+              display: flex;
+              right: 0;
+              justify-content: center;
+              align-items: center;
+              box-shadow: 0px 6px 15px 10px #eef2f9;
+              transition: .4s cubic-bezier(.7,.03,.58,.99);
+              &:hover {
+                background: $primary;
+                &:before {
+                  transform: translateX(-175px);
+                }
+              }
+              &:before {
+                transition: .4s cubic-bezier(.7,.03,.58,.99);
+                z-index: -3;
+                position: absolute;
+                content: 'Continue reading';
+                bottom: 24px;
+                right: -150px;
+                color: $primary;
+                width: 200px;
+                font-size: 14px;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

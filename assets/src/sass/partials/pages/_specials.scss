@@ -1,0 +1,38 @@
+#team {
+  margin: 100px auto 100px;
+  .container {
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .team-member {
+        margin: 75px 0;
+        width: 40%;
+        .member-img-container {
+          height: 500px;
+          width: 100%;
+          background: #dfdfdf;
+          overflow: hidden;
+          margin-bottom: 25px;
+          img {
+          }
+        }
+        .name {
+          font-weight: 700;
+          font-size: 20px;
+          display: block;
+        }
+        .position {
+          display: block;
+          font-size: 16px;
+          color: $text;
+
+        }
+        .description {
+          font-size: 16px;
+          color: $text;
+        }
+      }
+    }
+  }
+}

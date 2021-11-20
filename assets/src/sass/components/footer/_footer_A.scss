@@ -1,0 +1,279 @@
+#calltoaction{
+	padding: 80px 0;
+	background-size: cover;
+	position: relative;
+	&:before{
+		@include overlay();
+		background-color: $accentOverlay;
+	}
+	.container{
+		position: relative;
+		.inner{
+			h2{
+				color: #fff;
+				text-transform: uppercase;
+				text-align: center;
+				font-weight: 500;
+			}
+			.ctaButton{
+				text-align: center;
+				a{
+					color: #fff;
+					background-color: $primary;
+					text-transform: uppercase;
+					padding: 10px 20px;
+					border-radius: 20px;
+					font-weight: 500;
+					&:hover{
+						background-color: $secondary;
+					}
+				}
+			}
+		}
+	}
+}
+
+#calltoactionMobile{
+	display:none;
+	@include r(600px){
+		display:block;
+	}
+	position: fixed;
+	bottom:0;
+	background-color: $secondary;
+	width:100%;
+	z-index: 99;
+
+	.inner{
+		display:flex;
+		justify-content: start;
+		.scheduleService{
+			padding: 20px 25px;
+			span{
+				text-transform: uppercase;
+				color: #fff;
+				font-size: 1.2em;
+			}
+		}
+		.phone{
+			border-left: 0px solid $accent;
+			padding: 20px 25px;
+			background-color: $accent;
+			a{
+				color: #fff;
+				i{
+					transform: rotate(90deg);
+					font-size: 1.3em;
+				}				
+			}
+		}
+	}
+}
+
+#footer-site {
+	position: relative;
+	background: $primary;
+	padding: 75px 0;
+	.container {
+		.inner {
+			display: flex;
+			justify-content: flex-start;
+			@include r(600px){
+				flex-direction: column;
+				align-items: center;
+			}
+			.client-details {
+				display: flex;
+				flex-direction: column;
+				margin-right: 80px;
+				
+				@include r(600px){
+					margin-right: 0;
+					text-align: center;
+				}
+				.footer-logo{
+					width: 250px;
+					@include r(600px){
+						margin: 0 auto;
+					}
+				}
+				svg {
+					width: 175px;
+				}
+				span {
+					color: $white;
+					font-weight: 300;
+					font-size: 16px;
+					margin: 10px 0;
+					a {
+						color: $white;
+					}
+				}
+				.phonenumber{
+					color: $accent;
+					a{
+						color: $accent;
+					}
+				}
+				.awards {
+					margin-top: 15px;
+					display: flex;
+					align-items: center;
+					img {
+						display: block;
+						margin-right: 15px;
+					}
+				}
+				.location1{
+					span{
+						display:block;
+					}
+				}
+				hr{
+					width: 70%;
+					border: 0;
+					height: 1px;
+					background-color: $accent;
+					margin-left: 0;
+					@include r(600px){
+						margin: 0 auto !important;
+					}
+				}
+				.location2{
+					span{
+						display:block;
+					}
+				}
+			}
+			.quicklinks{
+				margin: 0 50px;
+				@include r(600px){
+					margin: 0;
+					display:none;
+				}
+				h3{
+					color: $accent;
+					text-transform: uppercase;
+					font-weight: 400;
+				}
+				ul{
+					padding-left: 0;
+					li{
+						list-style: none;
+						a{
+							text-transform: uppercase;
+							color: #fff;
+						}
+					}
+				}
+			}
+			.services{
+				margin: 0 50px;
+				width:350px;
+				@include r(600px){
+					margin: 0;
+					display:none;
+				}
+				h3{
+					color: $accent;
+					text-transform: uppercase;
+					font-weight: 400;
+				}
+				ul{
+					padding-left: 0;
+					display:flex;
+					flex-direction: column;
+					flex-wrap: wrap;
+					height: 130px;
+					li{
+						list-style: none;
+						font-size: 0.9em;
+						margin-bottom: 5px;
+						a{
+							text-transform: uppercase;
+							color: #fff;
+						}
+						&:hover{
+							a{
+								color: $accent;
+							}
+						}
+					}
+				}
+			}
+			.footer-hours{
+				margin: 0 25px;
+				width: 250px;
+				@include r(600px){
+					margin: 0;
+					text-align: center;
+				}
+				h3{
+					color: $accent;
+					text-transform: uppercase;
+					font-weight: 400;
+				}
+				ul{
+					flex-direction: column;
+					flex-wrap: wrap;
+					padding-left: 0px;
+					li{
+						list-style: none;
+						color: #fff;
+						font-size: .9em;
+					}
+				}
+
+			}
+			.expertise{
+				@include r(600px){
+					margin: 0;
+					text-align: center;
+				}
+				img{
+					width: 65%;
+				}
+			}
+
+		}
+		.social-icons{
+			margin-top: 20px;
+			@include r(600px){
+				text-align: center;
+			}
+			a{
+				padding: 20px 5px;
+				i{
+					color: #fff;
+					font-size: 1.5em;
+					padding:5px;
+				}
+			}
+		}
+		.copyright {
+			margin-top: 40px;
+			color: $white;
+			@include r(600px){
+				text-align: center;
+			}
+			span {
+				display: block;
+				font-size: 14px;
+				font-weight: 300;
+				i {
+					color: #42b2cc;
+				}
+				a{
+					color: #fff;
+					font-weight: 500;
+					&:hover{
+						color: $accent;
+					}
+				}
+			}
+		}
+	}
+}
+.grecaptcha-badge{
+	display:none !important;
+}

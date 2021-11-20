@@ -1,0 +1,74 @@
+#reviewsPage{
+    .container{
+        .inner{
+            h2{
+                text-align: center;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: $primary;
+            }
+            hr{
+                width: 100px;
+                height: 4px;
+                border:0;
+                background-color: $accent;
+            }
+            .introtext{
+                text-align: center;
+                color: $primary;
+            }
+
+            .reviewsWrap{
+                display:flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin: 80px 0;
+
+                .review{
+                    position: relative;
+                    &:before{
+                        content: '\f10d';
+                        font-family: "Font Awesome 5 Pro";
+                        font-weight: bold;
+                        color: $primary;
+                        position: absolute;
+                        left:20px;
+                        top:50px;
+                        font-size: 4em;
+                        opacity: 0.6;
+                    }
+                    width: 37%;
+                    background-color: #fff;
+                    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                    border-radius: 10px;
+                    padding: 20px 40px 20px 100px;
+                    margin-bottom: 40px;
+                    @include r(1280px){
+                        width:30%;
+                    }
+                    @include r(940px){
+                        width:100%;
+                    }
+                    h4{
+                        text-transform: uppercase;
+                        color: $primary;
+                        font-weight: 600;
+                        font-size: 1.2em;
+                    }
+                    .reviewText{
+                        p{
+                            color: $primary;
+                            line-height: 200%;
+                            font-weight: 400;
+                            font-size: 14px;
+                        }
+                    }
+                    .reviewAuthor{
+                        font-weight: 700;
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
+}

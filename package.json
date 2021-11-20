@@ -1,0 +1,70 @@
+{
+  "name": "fragment",
+  "version": "1.0.0",
+  "description": "Fragment - Component based theme for multi-client agencies.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "lint": "eslint \"./**/*.js\""
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.12.1",
+    "axios": "^0.18",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.5.3",
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "copy-webpack-plugin": "^4.6.0",
+    "cross-env": "^5.2.1",
+    "eslint": "^5.14.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-webpack-plugin": "^2.4.0",
+    "jquery": "^3.5.1",
+    "laravel-mix": "^4.1.4",
+    "lodash": "^4.17.20",
+    "popper.js": "^1.16.1",
+    "resolve-url-loader": "2.3.1",
+    "sass": "^1.28.0",
+    "sass-loader": "^7.3.1",
+    "tailwindcss": "^0.7.2",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12",
+    "webpack": "^4.44.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitalstormdev/precision-roofing.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "starter",
+    "fragment",
+    "component"
+  ],
+  "author": "VitalStorm Marketing inc.",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vitalstormdev/precision-roofing/issues"
+  },
+  "homepage": "https://github.com/vitalstormdev/precision-roofing#readme",
+  "dependencies": {
+    "countable": "^3.0.1",
+    "eslint-config-wordpress": "^2.0.0",
+    "headroom.js": "^0.9.4",
+    "nanobar": "^0.4.2",
+    "normalize-scss": "^7.0.1",
+    "scrollreveal": "^4.0.7",
+    "slick-carousel": "^1.8.1",
+    "webfontloader": "^1.6.28"
+  }
+}

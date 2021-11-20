@@ -1,0 +1,62 @@
+button {
+	@include transition(all $time $ease);
+}
+
+.btn {
+	padding: ($gutter * 1.5) ($gutter * 3);
+	border: none;
+	border-radius: 2px;
+
+	@extend .h3;
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.btn-sm {
+		padding: ($gutter * 0.8) ($gutter * 1.8);
+
+		@extend .h5;
+	}
+
+	&.btn-xs {
+		padding: ($gutter * 0.8) ($gutter * 1.8);
+
+		@include font-size(13px, 13px, 0.4px);
+	}
+
+	&.btn-xxs {
+		padding: ($gutter * 0.6) $gutter;
+
+		@include font-size(11px, 11px, 0.4px);
+	}
+}
+
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+.buttonstyle {
+	background-color: $secondary;
+	text-transform: uppercase;
+	border-radius:20px;
+	border:0;
+	color: #fff;
+	padding: 10px 15px;
+	position: relative;
+	top: 15px;
+	&:hover{
+		background-color: $accent;
+	}
+}

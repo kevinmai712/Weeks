@@ -1,0 +1,159 @@
+#coupons.b{
+  background-color: $primary;
+  height: auto;
+  @include r(1024px){
+    height: auto;
+  }
+  @include r(600px){
+    height:auto;
+  }
+  .container{
+    .inner{
+      display:flex;
+      @include r(600px){
+        flex-direction: column;
+      }
+      .coupon{
+        width: 40%;
+        background-color:$secondary;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        top: -30px;
+        height: 360px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include r(1024px){
+          height: auto;
+        }
+        @include r(600px){
+          width:100%;
+          height:auto;
+          padding: 50px 0px;
+        }
+        h3{
+          color: #fff;
+          font-size: 2.3em;
+          font-weight: 500;
+          text-transform: uppercase;
+          margin:0;
+          line-height: 45px;
+          @include r(1330px){
+            font-size: 2.8em;
+          }
+          @include r(1140px){
+            font-size: 2.8em;
+          }
+          @include r(860px){
+            font-size: 2.5em;
+          }
+        }
+        h4{
+          color: #fff;
+          font-size: 2em;
+          font-weight: 300;
+          text-transform: uppercase;
+          margin: 0;
+          @include r(1140px){
+            font-size: 1.6em;
+          }
+          @include r(860px){
+            font-size: 1.4em;
+          }
+        }
+        p{
+          color: #fff;
+        }
+        .claimbuttonstyle{
+          background-color: #1c1a1a;
+          text-transform: uppercase;
+          border-radius: 20px;
+          border: 0;
+          color: #fff;
+          padding: 10px 15px;
+          position: relative;
+          top: 15px;
+          width: 50%;;
+          margin: 0 auto;
+        }
+        .claimbuttonstyle:hover{
+          background-color: $accent;
+        }
+        span{
+          color: #fff;
+          form{
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            @include r(600px){
+              flex-direction: column;
+            }
+          }
+          input[type=email], input[type=text]{
+            background-color: rgba(255,255,255,0.7);
+            border:0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width:90%;
+            @include r(600px){
+              width:93%;
+            }
+          }
+          
+          .first-name, .last-name{
+            width:45%;
+            margin-bottom: 20px;
+            @include r(600px){
+              width:100%;
+            }
+          }
+          .your-email{
+            width:100%;
+            @include r(600px){
+              width:100%;
+            }
+            input[type=email]{
+              width:96%;
+              @include r(600px){
+                width:93%;
+                margin-bottom: 20px;
+              }
+            }
+          }
+          input[type=submit]{
+            margin: 20px auto;
+            padding: 5px 30px;        
+            font-family: "Montserrat";
+            background-color: $secondary;
+            @include r(600px){
+              margin: auto;
+            }
+    
+          }
+        }
+      }
+      .uspText{
+        width:60%;
+        padding: 50px 80px;
+        @include r(860px){
+          padding: 30px 30px;
+        }
+        @include r(600px){
+          width:100%;
+          padding: 10px 10px 40px;
+        }
+        h2{
+          color: $accent;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+        p{
+          color: #fff;
+        }
+      }
+    }
+  }
+}

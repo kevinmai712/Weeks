@@ -1,0 +1,86 @@
+{
+    "key": "group_6100841683205",
+    "title": "Careers Blurp",
+    "fields": [
+        {
+            "key": "field_61045bf8c79be",
+            "label": "Job Position",
+            "name": "careers_title",
+            "type": "text",
+            "instructions": "Eg: \"Electrician, Foreman, Lead HVAC Techician\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61045c17c79bf",
+            "label": "Careers Location",
+            "name": "careers_location",
+            "type": "text",
+            "instructions": "Eg: Houston, TX",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_61045c39c79c0",
+            "label": "Careers Page Link",
+            "name": "careers_link",
+            "type": "page_link",
+            "instructions": "Please select a careers page",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "careers"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "featured_image"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1628789675
+}

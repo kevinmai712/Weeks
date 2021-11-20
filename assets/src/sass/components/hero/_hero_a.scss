@@ -1,0 +1,79 @@
+#hero {
+  height: 88vh;
+  background-size: cover;
+  background-position: center;
+  margin-top:-85px;
+  position: relative;
+  @include r(860px){
+    height:77vh;
+    margin-top: -85px;
+  }
+
+  &:before{
+    @include overlay();
+    background: linear-gradient(90deg, rgb(60, 57, 57, 85%), rgb(95, 95, 95, 50%));
+  }
+
+  .container{
+    position: relative;
+    .inner{
+      .hero-highlight{
+        padding-top: 275px;
+        width: 500px;
+        @include r(600px){
+          width: 400px;
+          padding-top: 190px;
+        }
+        @include r(480px){
+          width:320px;
+        }
+        @include r(375px){
+          width: 300px;
+        }
+        h1{
+          color: #fff;
+          line-height:45px;
+        }
+        p{
+          color: #fff;
+          line-height: 1.5em;
+        }
+      }
+      /*.slider-nav{
+        display:flex;
+        justify-content: space-between;
+        width: 100px;
+        span{
+          height: 3px;
+          width:30px;
+          background-color: #fff;
+          display:block;
+        }
+      }*/
+      .slick-dots{
+        text-align: left;
+        li{
+          margin: 0 15px;
+          &:first-child{
+            margin-left: 0;
+          }
+          button{
+            background-color: $white;
+            //border-radius: 50px;
+            padding: 0;
+            height:4px;
+            width:40px;
+            &:before{
+              display:none;
+            }
+          }
+          &.slick-active{
+            button{
+              background-color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

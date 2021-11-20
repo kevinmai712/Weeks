@@ -1,0 +1,130 @@
+#internalHeader {
+  background: #fafafc;
+  height: 500px;
+  .container {
+    .inner {
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .headline {
+        width: 50%;
+        h2 {
+          font-size: 42px;
+          line-height: 54px;
+          color: $headers;
+          padding-right: 20%;
+        }
+        p {
+          font-size: 14px;
+          color: $text;
+          padding-right: 25%;
+        }
+      }
+    }
+  }
+}
+
+
+#image-hightlight {
+  margin: -100px auto 50px;
+  .container {
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      .img-container {
+        position: relative;
+        height: 650px;
+        width: 100%;
+        overflow: hidden;
+        margin: 50px auto;
+        img {
+          position: absolute;
+          bottom: 0;
+          top: -150px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: auto;
+        }
+      }
+  }
+}
+}
+
+#internalContent {
+  margin-top: 0px;
+  margin-bottom: 100px;
+  .container {
+    background: $white;
+    padding: 50px 0;
+    p {
+      width: 65%;
+      margin: 3em auto;
+      font-weight: 400;
+      color: rgba(35, 44, 57, 0.7);
+      font-size: 1.05rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+
+
+#midMod-service {
+  background: $secondary;
+  height: 400px;
+  .inner {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    .left {
+      width: 50%;
+        h4 {
+          color: $white;
+          margin-top: 0;
+          font-size: 36px;
+        }
+        .btn-row {
+          a {
+            color: $white;
+          }
+        }
+    }
+    .right {
+      width: 50%;
+      .service-icons {
+        height: 400px;
+        display: flex;
+        align-items: center;
+        .icon-container {
+          background: $white;
+          height: 100px;
+          width: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100px;
+          box-shadow: 0 6px 30px rgba(85,85,120,.15);
+          margin: 15px;
+          &:nth-child(1) {
+            transform: translateY(-15px) !important;
+          }
+          &:nth-child(2) {
+            transform: translateY(30px) !important;
+          }
+          &:nth-child(3) {
+            transform: translateY(5px) !important;
+          }
+          &:nth-child(4) {
+            transform: translateY(-30px) !important;
+          }
+        }
+        i {
+          font-size: 40px;
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

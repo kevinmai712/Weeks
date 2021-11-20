@@ -1,0 +1,32 @@
+
+<section id="mapSection" class="a">
+    <div class="inner">
+
+      <div class="locations_wrap">
+        <div class="map gmap-click">
+          <iframe src="" data-src="{{map}}" frameborder="0" async defer style="pointer-events:none;"></iframe>
+
+          <script>
+          jQuery(document).ready(function(){
+            if(jQuery(window).width() >= 600){
+                function init() {
+                  var vidDefer = document.getElementsByTagName('iframe');
+                  for (var i=0; i<vidDefer.length; i++) {
+                    if(vidDefer[i].getAttribute('data-src')) {
+                      vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+                      console.log("map loaded");
+                    }
+                  }
+                }
+                window.onload = init;
+            }
+          });
+        </script>
+        </div>
+        <div class="about_text">
+          <p>{{text}}</p>
+          <a href="{{serviceArea}}" class="buttonstyle">See Service Area</a>
+        </div>
+      </div>
+    </div>
+</section>

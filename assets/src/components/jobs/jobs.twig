@@ -1,0 +1,21 @@
+
+
+<header id="jobs-header" class="a">
+  <div class="container">
+    <div class="inner">
+      <div class="jobsText">
+        <h2>{{job_title}}</h2>
+        <span id="job_pindrop"><i class="fas fa-briefcase"></i> {{job_location}}</span> <span id="job_duration_icon"><i class="fas fa-map-marker-alt"></i> {{job_duration}}</span>
+        <p>{{copy}}</p>
+      </div>
+    </div>
+    <div class="form-wrapper">
+        <h2>Apply Now</h2>
+        {{ function('do_shortcode', careerForm) }}
+    </div>
+  </div>
+</header>
+
+
+
+

@@ -1,0 +1,161 @@
+/*-------------------------
+*  Grid
+*--------------------------*/
+$columns: 12;
+$gutter: 150px;
+$spacing: 20;
+
+/*-------------------------
+*  Spacing
+*--------------------------*/
+$paddings: ('pt': 'padding-top', 'pr': 'padding-right', 'pb': 'padding-bottom', 'pl': 'padding-left');
+$margins: ('mt': 'margin-top', 'mr': 'margin-right', 'mb': 'margin-bottom', 'ml': 'margin-left');
+
+/*-------------------------
+*  Media Queries
+*--------------------------*/
+$xs: 480px;
+$sm: 600px;
+$md: 800px;
+$lg: 1190px;
+$xl: 1440px;
+$xxl: 1700px;
+
+$breakpoints: ('xs': $xs, 'sm': $sm, 'md': $md, 'lg': $lg, 'xl': $xl);
+
+/*-------------------------
+*  Colors
+*--------------------------*/
+$white: #fff;
+$black: #000;
+$headers: #232c39;
+$text: rgba(35,44,57,.7);
+$light-grey: #f0f0f0;
+
+
+$primary: #1c1a1a;
+$secondary: #f03120;
+$accent: #a2a2a2;
+
+//overlays
+$primaryOverlay: rgba(136, 135, 135, 0.93);
+$secondaryOverlay: rgba(162,162,162, 0.7);
+$accentOverlay: rgba(240,49,32, 0.7);
+
+$primaryOverlayDarker: rgba(14,49,82,0.9);
+
+//gradients
+$primaryGradient: linear-gradient(180deg, #1A4975, #15436D, #0A355B);
+$secondaryGradient: linear-gradient(180deg, #42B2CC, #3287A9, #215B84, #1A4975);
+$primaryGradientOverlay: linear-gradient(180deg, $primaryOverlay, $secondaryOverlay);
+
+
+
+// $primary: #656565;
+// $secondary: #33cc33;
+// $accent: #353535;
+
+
+// $primaryOverlay: rgba(26,73,117,0.7);
+// $secondaryOverlay: rgba(35,31,32, 0.7);
+// $accentOverlay: rgba(213,23,43,0.7);
+
+
+
+// custom colors
+
+$colours: ('white': $white, 'black': $black, 'light-grey': $light-grey);
+
+/*-------------------------
+*  Typography
+*--------------------------*/
+$base-font: 'Montserrat', 'Poppins', 'Helvetica Neue', "Open Sans", Helvetica, Arial, sans-serif;
+
+$base-fs: 16px;
+
+
+
+/*-------------------------
+*  Animations
+*--------------------------*/
+$time: 320ms;
+$time_slow: 700ms;
+
+$swing: cubic-bezier(0.55, 0, 0.1, 1);
+$swift: cubic-bezier(0.4, 0, 0.2, 1);
+$ease: ease;
+
+$transition-default: all $time $ease;
+
+
+@mixin overlay(){
+  content:'';
+  display: block;
+  position: absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+
+
+ @mixin r($point) {
+    @if $point == 240px {
+      @media (max-width: $point) { @content; }
+    }
+   @if $point == 320px {
+     @media (max-width: $point) { @content; }
+   }
+	 @if $point == 375px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 480px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 600px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 768px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 800px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 860px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 875px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 895px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 940px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 1024px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 1031px {
+    @media (max-width: $point) { @content; }
+  }
+   @if $point == 1140px {
+     @media (max-width: $point) { @content; }
+   }
+   @if $point == 1280px {
+     @media (max-width: $point) { @content; }
+   }
+	 @if $point == 1330px {
+		 @media (max-width: $point) { @content; }
+	 }
+	 @if $point == 1365px {
+		 @media (max-width: $point) { @content; }
+	 }
+	 @if $point == 1440px {
+		 @media (max-width: $point) { @content; }
+	 }
+   @if $point == 1550px {
+     @media (max-width: $point) { @content; }
+   }
+ }

@@ -1,0 +1,405 @@
+/*
+
+Fragment headers
+
+Uses the # I labeled to easily find the starting css of each header
+
+1. Navigation style 1  (navbar_opt1)
+2. Navigation style 2 (navbar_opt2)
+3. Navigation social media style (socials-header)
+
+*/
+
+#mainheader {
+	z-index: 300;
+	/*####################################
+	######################################
+	3. Navigation Volume 1
+		. Includes Slideout menu on desktop
+		. Make sure to call the slideout twig file
+	######################################
+	####################################*/
+	#nav.a {
+		height: 100px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		position: fixed;
+		z-index: 400;
+		.socials-header {
+			li {
+				margin: 0 12px;
+				i {
+					color: $white;
+					font-size: 15px;
+				}
+			}
+		}
+		.inner {
+			display: flex;
+			align-items: center;
+			position: relative;
+			height: 100px;
+			.details-holder {
+				position: absolute;
+				left: 0px;
+				display: flex;
+				align-items: center;
+				.logo-wrapper {
+					// -webkit-clip-path: polygon(0 0, 100% 0, 86% 86%, 0% 100%);
+					// clip-path: polygon(0 0, 100% 0, 86% 86%, 0% 100%);
+					// background: $white;
+					height: 100px;
+					width: 200px;
+					margin-right: 25px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					img {
+						width: 100px;
+					}
+				}
+			}
+			#menu-selection {
+				position: absolute;
+				right: 0px;
+				display: flex;
+				align-items: center;
+				height: 100px;
+				ul.nav-main {
+					display: flex;
+					padding: 0;
+					.nav-main-item {
+						margin: 0 1rem;
+						padding: 20px;
+						cursor: pointer;
+						a {
+							font-size: 14px;
+							color: #fff;
+						}
+						&:hover {
+							a {
+								color: $accent;
+							}
+						}
+						&:hover > ul {
+							display: block;
+						}
+						.nav-drop {
+							position: absolute;
+							padding: 0;
+							background: $white;
+							border: 1px solid #efefef;
+							box-shadow: 0 5px 15px rgba(60,60,110,.1);
+							display: none;
+							z-index: 99;
+							margin-top: 18px;
+							li {
+								transition: .1s ease-in-out;
+								&:hover {
+									background: rgba(0,0,120,.05);
+									border-left: 5px solid $accent;
+									a {
+										color: $text;
+									}
+								}
+								a {
+									padding: 10px 80px 10px 30px;
+									color: $headers;
+									display: block;
+									border-bottom: 1pt solid #e6e6e6;
+								}
+							}
+						}
+					}
+					li {
+						list-style: none;
+						a {
+							font-size: 16px;
+							color: #210210;
+						}
+					}
+				}
+				.reach {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					height: 100px;
+					margin-left: 20px;
+					.schedule {
+						justify-content: center;
+						align-items: center;
+						display: flex;
+						margin: 0 15px;
+						transition: .1s ease-in-out;
+						 a {
+							 text-align: center;
+							 width: 175px;
+							 padding: 10px 20px;
+							 border-radius: 100px;
+							 border: 2px solid #fff;
+							 font-size: 14px;
+							 color: $white;
+							 &:hover {
+								 background: $white;
+								 color: $headers;
+							 }
+						 }
+					}
+					.call {
+						justify-content: center;
+						align-items: center;
+						display: flex;
+						margin: 0 15px;
+						transition: .1s ease-in-out;
+						a {
+							text-align: center;
+							width: 175px;
+							padding: 10px 20px;
+							border-radius: 100px;
+							font-size: 14px;
+							color: $white;
+							border: 2px solid $accent;
+							background: linear-gradient(to left, $accent, darken($accent, 5%));
+							i {
+								color: $white !important;
+								font-size: 14px;
+								margin-right: 10px;
+								transform: rotate(90deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#nav.a.dark {
+		.socials-header {
+				i {
+					color: $headers;
+				}
+		}
+	  #menu-selection ul.nav-main .nav-main-item a {
+				color: $headers;
+		}
+			.inner #menu-selection .reach .schedule {
+				 a {
+					 background: $white;
+					 border: 1px solid $text;
+					 color: $headers;
+					 &:hover {
+						 background: $headers;
+						 color: $white;
+					 }
+				 }
+			}
+	}
+
+	/*
+
+	# Navigation Volume 3
+		1. Includes Slideout menu on desktop
+		2. Make sure to call the slideout twig file
+	*/
+
+	/*####################################
+	######################################
+	2. Navigation Volume 3
+		. Includes Slideout menu on desktop
+		. Make sure to call the slideout twig file
+	######################################
+	####################################*/
+
+
+
+		#nav.b {
+			z-index: 400;
+			border-bottom: 1px solid #dfdfdf;
+			height: 70px;
+			width: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			background: $white;
+			overflow: hidden;
+			position: fixed;
+			.inner {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				height: 70px;
+				.details-holder {
+					position: absolute;
+					left: 0px;
+					display: flex;
+					align-items: center;
+					height: 70px;
+					@include r(600px) {
+						border-right-width: 1px;
+						border-right-color: #a9a9a9;
+						border-right-style: solid;
+					}
+					#toggle-button {
+						border-right-width: 1px;
+						border-right-color: #a9a9a9;
+						border-right-style: solid;
+						width: 100px;
+						display: flex;
+						@include r(600px) {
+							width: 80px;
+							display: flex;
+							justify-content: center;
+							margin: 0;
+							border: none;
+						}
+						p {
+							display: inline-block;
+							align-self: center;
+							margin-left: 10px;
+							font-size: 14px;
+							@include r(600px) {
+								display: none;
+							}
+						}
+					}
+				}
+				.nav-main {
+					display: flex;
+					padding: 0;
+					li {
+						list-style: none;
+						margin: 0 1.4rem;
+						a {
+							font-size: 16px;
+							color: $headers;
+						}
+					}
+				}
+				.logo {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					img {
+						width: 125px;
+					}
+				}
+				.reach {
+					position: absolute;
+					right: 0px;
+					display: flex;
+					align-items: center;
+					.search {
+						margin-right: 25px;
+						display: none;
+						@include r(768px) {
+							display: block;
+						}
+						span {
+							i {
+								color: $headers;
+								font-size: 16px;
+							}
+						}
+					}
+					.schedule {
+						margin-right: 25px;
+						@include r(1024px) {
+							margin-right: 0px;
+						}
+						@include r(860px) {
+							display: none;
+						}
+						 a {
+							 padding: 15px 30px;
+							 font-size: 12px;
+							 color: $headers;
+							 font-weight: 700;
+							 text-transform: uppercase;
+							 &:hover {
+								 color: $secondary;
+							 }
+							 small {
+								font-weight: 400;
+								font-size: 12px;
+								margin-right: 5px;
+								color: $text;
+								@include r(1140px) {
+									display: none;
+								}
+							 }
+						 }
+					}
+					.call {
+						justify-content: center;
+						align-items: center;
+						display: flex;
+						@include r(860px) {
+							width: 200px
+						}
+						@include r(768px) {
+							display: none;
+						}
+						a {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							height: 70px;
+							width: 200px;
+							background: $accent;
+							padding: 0px;
+							color: $white;
+							font-size: 16px;
+							&:hover {
+								background: darken($accent, 10%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+/*####################################
+######################################
+3.    SOCIAL MEDIA HEADER STYLE
+######################################
+####################################*/
+.socials-header {
+	@include r(1024px) {
+		display: none;
+	}
+	ul {
+		padding: 0;
+		display: flex;
+		li {
+			list-style: none;
+			margin: 0 6px;
+			transition: .2s ease-in-out;
+			&:hover {
+				transform: translateY(-3px);
+				.fa-facebook-f {
+					color: #4867AA;
+				}
+				.fa-twitter {
+					color: #1DA1F2;
+				}
+				.fa-instagram:before {
+					background: linear-gradient(to right top, #feda75 0, #fa7e1e 20%, #d62976 40%, #962fbf 60%, #4f5bd5 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				.fa-linkedin-in {
+					color: #0077B5;
+				}
+			}
+			i {
+				font-size: 16px;
+				color: $headers;
+				transition: .2s ease-in-out;
+			}
+		}
+	}
+}

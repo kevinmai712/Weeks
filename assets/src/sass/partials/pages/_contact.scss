@@ -1,0 +1,180 @@
+
+$fieldwidth: 150px;
+
+/*.headerFixed{
+  .contactInfo{
+    bottom: -310px !important;
+  }
+}*/
+
+#contact-header.a {
+  .container {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @include r(1024px){
+      margin-bottom: 50px;
+    }
+    .inner {
+      width: 50%;
+      position:relative;
+      @include r(860px){
+        margin-bottom: 40px;
+        width:100%;
+      }
+      .contactText{
+        h2{
+          color: $primary;
+          font-weight: 400;
+          @include r(600px){
+            text-align: center;
+          }
+        }
+        p{
+          color: $primary;
+        }
+        a{
+          color: $secondary;
+        }
+      }
+      .contactInfo{
+        background-color: $secondary;
+        display:block;
+        // position: absolute;
+        // bottom: -120px;
+        width: 330px;
+        padding: 15px 30px 30px;
+        border-radius: 20px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        @include r(1330px){
+          bottom: -240px;
+        }
+        @include r(1024px){
+          position: relative;
+          bottom: 0;
+        }
+        @include r(600px){
+          width:auto;
+          bottom: 0;
+          position: initial;
+        }
+        h2{
+          font-size:1.2em;
+          color: $white;
+          font-weight: 400;
+          text-transform: uppercase;
+          text-align: center;
+        }
+        i{
+          color: $white;
+        }
+        a{
+          color: #fff;
+          font-size: 0.8em;
+        }
+        p{
+          color: #fff;
+          font-size: 0.8em;
+          margin:0;
+
+        }
+        hr{
+          height:1px;
+          border: 0;
+          background:$secondary;
+        }
+        .btn-row{}
+      }
+    }
+    .form-wrapper {
+      width: 40%;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      padding: 20px 40px 40px;
+      height: 50%;
+      // margin-bottom: -150px;
+      // position: relative;
+      @include r(1024px){
+        margin-bottom: 20px;
+        
+      }
+      @include r(860px){
+        width:100%;
+      }
+      h2{
+        text-align: center;
+        color: $secondary;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+      .inner-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form {
+          // /width: 500px;
+          fieldset {
+            border: none;
+            padding: 5px 0px;
+            margin: 15px auto;
+          }
+          label {
+            display: block;
+            font-size: 12px;
+            color: $headers;
+            margin-bottom: 5px;
+          }
+          input {
+            border-radius: 3px;
+            outline: none !important;
+            background: $white;
+            border: 1px solid #bfbfbf;
+            color: $headers;
+            font-size: 13px;
+            padding: 10px 15px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: .3s ease-in-out;
+            &:focus {
+              background: darken(#fff, 2%) !important;
+            }
+          }
+          textarea {
+            background: $white;
+            border: 1px solid #bfbfbf;
+            border-radius: 3px;
+            outline: none !important;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            color: $headers;
+            font-size: 13px;
+            resize: none;
+            &:focus {
+              background: darken(#fff, 2%) !important;
+            }
+          }
+          input[type=submit] {
+            border-radius: 50px;
+            color: $white;
+            padding: 10px 25px;
+            margin: 0 auto;
+            background: $secondary;
+            font-size: 16px;
+            border: none;
+            display: block;
+            width: auto;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover{
+              background-color: $accent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

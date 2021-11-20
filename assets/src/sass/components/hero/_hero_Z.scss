@@ -1,0 +1,366 @@
+#hero{
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 900px;
+  background-position: -200px -10px;
+  @include r(1440px) {
+    background-position: -300px -10px;
+    background: red;
+  }
+  @include r(1280px) {
+    background-position: -500px 20px;
+    background: yellow;
+  }
+  @include r(1024px) {
+    background-position: -600px 20px;
+    background: blue;
+  }
+  @include r(768px) {
+    background-position: -300px 0px;
+    background: green;
+  }
+  @include r(600px) {
+    background-position: -400px 0px;
+    height: 900px;
+  }
+  .container {
+    .inner {
+      display: flex;
+      justify-content: flex-end;
+      height: 700px;
+      align-items: center;
+      @include r(768px) {
+        justify-content: flex-start;
+      }
+      @include r(600px) {
+        height: 650px;
+      }
+      @include r(480px) {
+        height: 600px;
+      }
+      .hero-highlight {
+        width: 42.5%;
+        @include r(1280px) {
+          margin-right: 25px
+        }
+        @include r(1024px) {
+          margin-right: 50px
+        }
+        @include r(860px) {
+          margin-right: 0px
+        }
+        @include r(768px) {
+          width: 100%;
+        }
+        @include r(480px) {
+          width: 100%;
+          padding: 0px 5px;
+        }
+        h1 {
+          color: $headers;
+          font-size: 34px;
+          line-height: 48px;
+          font-weight: 700;
+          @include r(860px) {
+            font-size: 30px;
+            line-height: 44px;
+          }
+          @include r(768px) {
+            font-size: 36px;
+          }
+          @include r(480px) {
+            font-size: 34px;
+            font-weight: 900;
+            line-height: 48px;
+          }
+        }
+        p {
+          color: $text;
+          font-size: 16px;
+          line-height: 30px;
+          @include r(480px) {
+            font-size: 18px;
+            line-height: 34px;
+          }
+        }
+        .btn-row {
+          margin-top: 50px;
+          a {
+            background: $accent;
+            font-size: 16px;
+            color: #fff;
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            width: 175px;
+            align-items: center;
+            position: relative;
+            &:hover {
+              background: darken($accent, 10%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#hero.b {
+  background: linear-gradient(to left, $headers, lighten($headers, 10%));
+  height: 750px;
+  background-repeat: no-repeat;
+  margin-bottom: 450px;
+  &:before {
+  opacity: .01;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 750px;
+  background-color: white;
+  left: -5px;
+  top: 0px;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 74% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 74% 80%, 0% 100%);
+}
+  .container {
+    .inner {
+      display: flex;
+      align-items: center;
+      height: 750px;
+      .wrapper {
+        margin-top: 75px;
+        display: flex;
+        justify-content: flex-start;
+        @include r(600px) {
+          height: 650px;
+        }
+        @include r(480px) {
+          height: 600px;
+        }
+        .hero-highlight {
+          margin-right: 100px;
+          @include r(1280px) {
+            margin-right: 25px
+          }
+          @include r(1024px) {
+            margin-right: 50px
+          }
+          @include r(860px) {
+            margin-right: 0px
+          }
+          @include r(768px) {
+            width: 100%;
+          }
+          @include r(480px) {
+            width: 100%;
+            padding: 0px 5px;
+          }
+          h1 {
+            margin-top: 0;
+            color: $white;
+            font-size: 38px;
+            line-height: 52px;
+            font-weight: 700;
+            @include r(860px) {
+              font-size: 30px;
+              line-height: 44px;
+            }
+            @include r(768px) {
+              font-size: 36px;
+            }
+            @include r(480px) {
+              font-size: 34px;
+              font-weight: 900;
+              line-height: 48px;
+            }
+          }
+          p {
+            color: $white;
+            font-size: 14px;
+            line-height: 30px;
+            padding-right: 75px;
+            @include r(480px) {
+              padding-right: 0px;
+              font-size: 18px;
+              line-height: 34px;
+            }
+          }
+          .btn-row {
+            a {
+              color: $white;
+              background: linear-gradient(to left, $secondary, lighten($primary, 15%));
+              border-radius: 100px;
+              padding: 0 30px;
+              justify-content: flex-start;
+              i {
+                color: $white;
+                background: none;
+                transition: .2s ease-in-out;
+                transform: translateX(-10px);
+              }
+            }
+          }
+        }
+        .hero-companyInfo {
+          width: 50%;
+          display: flex;
+          margin-left: 10%;
+          .section {
+            margin: 0 50px 0 0;
+              h3 {
+                margin-top: 0;
+                color: $accent;
+                font-size: 16px;
+              }
+              p {
+                color: $white;
+                font-size: 12px;
+                margin: 0;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+.hero-image {
+  border-left: 12px solid $accent;
+  border-bottom: 12px solid $accent;
+  position: absolute;
+  right: 0px;
+  top: 400px;
+  width: 45%;
+  height: 500px;
+  overflow: hidden;
+  img {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+
+
+#hero.c {
+  background-image: url('https://www.archcitygranite.com/wp-content/uploads/2015/11/tips-for-family-together-kitchen1.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  background-repeat: no-repeat;
+  margin-bottom: 250px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 93%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 93%, 0 100%);
+  // -webkit-clip-path: ellipse(100% 95% at 50% 0%);
+  // clip-path: ellipse(100% 95% at 50% 0%);
+  &:before {
+  opacity: .8;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(to top, $primary, darken($primary, 25%));
+  left: 0px;
+  right: 0px;
+}
+  .container {
+    position: relative;
+    .inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 700px;
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        @include r(600px) {
+          height: 650px;
+        }
+        @include r(480px) {
+          height: 600px;
+        }
+        .hero-highlight {
+          z-index: 9;
+          text-align: center;
+          width: 60%;
+          @include r(1280px) {
+            margin-right: 25px
+          }
+          @include r(1024px) {
+            margin-right: 50px
+          }
+          @include r(860px) {
+            margin-right: 0px
+          }
+          @include r(768px) {
+            width: 100%;
+          }
+          @include r(480px) {
+            width: 100%;
+            padding: 0px 5px;
+          }
+          h1 {
+            margin-top: 0;
+            color: $white;
+            font-size: 40px;
+            line-height: 52px;
+            font-weight: 700;
+            @include r(860px) {
+              font-size: 30px;
+              line-height: 44px;
+            }
+            @include r(768px) {
+              font-size: 36px;
+            }
+            @include r(480px) {
+              font-size: 34px;
+              font-weight: 900;
+              line-height: 48px;
+            }
+          }
+          p {
+            color: $white;
+            font-size: 14px;
+            line-height: 30px;
+            @include r(480px) {
+              padding-right: 0px;
+              font-size: 18px;
+              line-height: 34px;
+            }
+          }
+          .btn-row {
+            display: flex;
+            justify-content: center;
+            a {
+              color: $white;
+              background: linear-gradient(to left, $accent, darken($accent, 5%));
+              border-radius: 100px;
+              padding: 0 30px;
+              justify-content: flex-start;
+            }
+          }
+        }
+        .hero-companyInfo {
+          width: 50%;
+          display: flex;
+          margin-left: 10%;
+          .section {
+            margin: 0 50px 0 0;
+              h3 {
+                margin-top: 0;
+                color: $accent;
+                font-size: 16px;
+              }
+              p {
+                color: $white;
+                font-size: 12px;
+                margin: 0;
+              }
+          }
+        }
+      }
+    }
+  }
+}

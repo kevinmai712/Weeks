@@ -1,0 +1,58 @@
+{% if lightMode == true %}
+<div id="nav" class="a light">
+{% else %}
+<div id="nav" class="a" style="background-image:url({{page_hero_image}});">
+{% endif %}
+  <div class="inner">
+    <div class="details-holder">
+      <div class="logo-wrapper">
+        <a href="{{ homeUrl }}">
+          {% if lightMode == true %}
+          <img src="{{ url }}/assets/dist/images/{{ logoColor }}" alt="company logo">
+          {% else %}
+          <img src="{{ url }}/assets/dist/images/{{ logoWhite }}" alt="company logo">
+          {% endif %}
+        </a>
+      </div>
+      <div id="menu-selection">
+        <ul class="nav-main">
+            {% for item in menu.items %}
+                <li class="nav-main-item {{ item.classes|join(' ') }}">
+                    <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
+                    {% if item.children %}
+                        <ul class="nav-drop">
+                            {% for child in item.children %}
+                                <li class="nav-drop-item">
+                                    <a href="{{ child.link }}">{{ child.title }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+      </div>
+      <div class="reach">
+        <div class="call">
+          <a href="tel:{{ phone }}"><i class="fas fa-phone"></i> <span>{{ phone }}</span></a>
+        </div>
+      </div>
+      <div class="mobileHamburger">
+        <span><i class="far fa-bars"></i></span>
+      </div>
+  </div>
+</div>
+</div>
+
+{% if lightMode == true %}
+  <div class="page-title" style="background-image: url({{page_hero_image}});">
+  {% else %}
+  <div class="page-title">
+  {% endif %}
+    <h1>{{post.title}}</h1>
+      <div id="careers_header_title">
+        <p>{{post.careers_subheading}}</p>
+        <span class="jobpopupbtn">Apply Now</span>
+      </div>
+  </div>
+

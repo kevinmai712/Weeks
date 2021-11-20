@@ -1,0 +1,196 @@
+#reviewsHeader {
+  height: 500px;
+  .container {
+    .inner {
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .headline {
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        h2 {
+          font-size: 36px;
+          line-height: 44px;
+          color: $headers;
+        }
+        p {
+          font-size: 14px;
+          color: $text;
+        }
+      }
+      .icons {
+        margin: 0 auto;
+        width: 50%;
+        i {
+          position: absolute;
+          top: 200px;
+          color: $secondary;
+          &:nth-child(1) {
+            left: -10px;
+            top: 100px;
+          }
+          &:nth-child(2) {
+            right: -30px;
+            top: 0px;
+          }
+          &:nth-child(3) {
+            right: 40px;
+            top: 150px;
+          }
+          &:nth-child(4) {
+            left: 200px;
+            top: 220px;
+          }
+        }
+      }
+      .review-highlight {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        &:before {
+          z-index: 1;
+          content: '';
+          position: absolute;
+          width: 475px;
+          height: 275px;
+          background: $accent;
+          right: 25px;
+          bottom: -25px;
+          padding: 5px 50px;
+        }
+        .review-card {
+          z-index: 200;
+          background: $white;
+          height: 275px;
+          width: 475px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 50px;
+          border-radius: 3px;
+          box-shadow: 0 6px 65px rgba(88,88,200,.15);
+          position: relative;
+          .card-inner {
+            .quote {
+              margin-top: 20px;
+              display: block;
+              line-height: 52px;
+              font-size: 72px;
+              color: $secondary;
+              font-weight: 700;
+            }
+            h3 {
+              font-size: 20px;
+              line-height: 24px;
+              color: $headers;
+            }
+            .review {
+              display: block;
+              font-size: 16px;
+              color: $text;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#reviews-row {
+  width: 95%;
+  margin: 0 auto;
+  .slick-list {
+    height: 300px;
+  }
+  .review-highlight {
+    display: flex;
+    justify-content: space-around;
+    height: 400px;
+    align-items: center;
+    .review-card {
+      padding: 25px;
+      width: 300px !important;
+      height: 160px !important;
+      margin: 0 40px;
+      border-radius: 3px;
+      border: 1px solid #efefef;
+      box-shadow: 0 8px 40px rgba(150,150,180,.1);
+      .card-inner {
+        .review {
+          font-size: 15px;
+          font-weight: 300;
+          color: $primary
+        }
+        h5 {
+          font-size: 18px;
+          color: $primary;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+
+
+#midMod-service {
+  background: $secondary;
+  height: 400px;
+  .inner {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    .left {
+      width: 50%;
+        h4 {
+          color: $white;
+          margin-top: 0;
+          font-size: 36px;
+        }
+        .btn-row {
+          a {
+            color: $white;
+          }
+        }
+    }
+    .right {
+      width: 50%;
+      .service-icons {
+        height: 400px;
+        display: flex;
+        align-items: center;
+        .icon-container {
+          background: $white;
+          height: 100px;
+          width: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100px;
+          box-shadow: 0 6px 30px rgba(85,85,120,.15);
+          margin: 15px;
+          &:nth-child(1) {
+            transform: translateY(-15px) !important;
+          }
+          &:nth-child(2) {
+            transform: translateY(30px) !important;
+          }
+          &:nth-child(3) {
+            transform: translateY(5px) !important;
+          }
+          &:nth-child(4) {
+            transform: translateY(-30px) !important;
+          }
+        }
+        i {
+          font-size: 40px;
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

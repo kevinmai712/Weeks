@@ -1,0 +1,37 @@
+<header id="careers-header" class="a">
+  <div class="container">
+    <div class="inner">
+      <div class="careersText">
+        <p>{{copy}}</p>
+        <span class="jobpopupbtn">Apply Now</span>
+      </div>
+    </div>
+    <div class="form-wrapper">
+      <h2>Available Positions</h2>
+        <div id="post-career">
+            <div class="inner-post">      
+                {% for post in careers %}
+                    <div class="career-post">
+                        <h4>{{post.title}}</h4>
+                        <hr>
+                        <div class="careerText">
+                            <p class="careerLocation">Location: {{post.careers_location}}</p>
+                            <p>We are looking for an experienced {{post.title}} to join our team.</p>
+                        </div>
+                        <a href="?page_id={{post.careers_link}}" class="careerLink">Read More</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="popup-job-form">
+        <span class="close-job-form"><i class="fas fa-times-circle" aria-hidden="true"></i></span>
+        <h2>Apply Now:</h2>
+        {{ function('do_shortcode', careerForm) }}
+    </div>
+  </div>
+</header>
+
+
+
+

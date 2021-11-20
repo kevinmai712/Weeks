@@ -1,0 +1,117 @@
+#reviews {
+  margin: 100px auto 200px;
+  .container {
+    .inner {
+      header {
+        text-align: center;
+        h4 {
+          font-size: 26px;
+          line-height: 38px;
+          color: $headers;
+          margin-bottom: 15px;
+        }
+        p {
+          color: rgba(35, 44, 57, 0.7);
+          font-weight: 300;
+          width: 50%;
+          margin: 15px auto;
+          @include r(600px) {
+            width: 90%;
+          }
+        }
+      }
+      .review-cards {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        @include r(1280px) {
+          flex-direction: column;
+        }
+        .cards {
+          position: relative;
+          width: 350px;
+          height: 175px;
+          background: $white;
+          box-shadow: 0px 4px 35px 5px #eef2f9;
+          padding: 30px;
+          @include r(1280px) {
+            margin: 15px auto;
+            width: 600px;
+          }
+          @include r(768px) {
+            width: 350px;
+            margin: 0 auto;
+            &:nth-child(2),&:nth-child(3) {
+              display: none;
+            }
+          }
+          @include r(480px) {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 15px;
+            height: 185px;
+          }
+          span {
+            font-size: 15px;
+            color: $primary;
+            font-weight: 300;
+          }
+          h5 {
+            color: $primary;
+            position: absolute;
+            bottom: 20px;
+            font-size: 16px;
+            margin: 0;
+          }
+        }
+      }
+      .btn-row {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        a {
+          background: $accent;
+          font-size: 16px;
+          color: #fff;
+          height: 55px;
+          display: flex;
+          justify-content: center;
+          width: 175px;
+          align-items: center;
+          position: relative;
+          &:hover {
+            background: darken($accent, 10%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#reviews.reviews-side {
+  .container {
+    .inner {
+      justify-content: center;
+      display: flex;
+      header {
+        h4 {
+
+        }
+        p {
+
+        }
+      }
+      .review-cards {
+        .cards {
+          span {
+
+          }
+          h5 {
+
+          }
+        }
+      }
+    }
+  }
+}

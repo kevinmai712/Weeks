@@ -1,0 +1,229 @@
+#about-blurb {
+  z-index: -3;
+  margin-top: -200px;
+  height: 1000px;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  @include r(1440px) {
+    height: 850px;
+  }
+  @include r(1024px) {
+    margin-top: 0px;
+    background-size: 1800px !important;
+    height: 800px;
+    background-position: center !important;
+  }
+  @include r(600px) {
+    background-size: 700% !important;
+    background-position: center !important;
+    padding: 75px 0 125px 0;
+    height: 100%
+  }
+  .container {
+    .inner {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+      @include r(1024px) {
+        flex-direction: column;
+      }
+      .content-left {
+      width: 35%;
+      padding: 0 20px;
+      @include r(1024px) {
+        width: 100%;
+        padding: 0 5px;
+      }
+      h2 {
+        font-size: 26px;
+        line-height: 38px;
+      }
+      .btn-row {
+        @include r(1024px) {
+          display: none;
+        }
+        margin-top: 50px;
+        a {
+          background: $accent;
+          font-size: 16px;
+          color: #fff;
+          height: 55px;
+          display: flex;
+          justify-content: center;
+          width: 175px;
+          align-items: center;
+          position: relative;
+          &:hover {
+            background: darken($accent, 10%);
+          }
+        }
+      }
+      }
+      .content-right {
+      width: 40%;
+      padding: 0 20px;
+      @include r(1024px) {
+        width: 100%;
+        padding: 0 5px;
+      }
+      p {
+        color: $text;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 36px;
+        @include r(600px) {
+          font-size: 18px;
+          line-height: 40px;
+          &:nth-child(1) {
+            display: none;
+          }
+        }
+      }
+      .btn-row {
+        a {
+          color: $accent;
+          font-size: 16px;
+          &:hover {
+            color: darken($accent, 10%);
+          }
+        }
+      }
+      }
+    }
+  }
+}
+
+
+#about-blurb.option2 {
+  background-color: darken($secondary, 5%);
+  background-image: url('https://a.slack-edge.com/e1a1f/spacesuit/source/images/backgrounds/bg-halftone-black-20p.png');
+  background-size: 1300px 700px;
+  background-repeat: repeat;
+  height: auto;
+  margin-top: 0;
+  z-index: -3;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  .container {
+    .inner {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 100px 0;
+      @include r(1024px) {
+        flex-direction: column;
+      }
+      .content-left {
+        width: 100%;
+        margin: 0 auto 80px;
+      h2 {
+        text-align: center;
+        font-size: 28px;
+        line-height: 38px;
+        width: 40%;
+        margin: 0 auto;
+        }
+      }
+      .content-right {
+        width: 100%;
+        display: flex;
+      @include r(1024px) {
+        width: 100%;
+        padding: 0 5px;
+      }
+      p {
+        margin: 0 25px;
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 36px;
+        @include r(600px) {
+          font-size: 18px;
+          line-height: 40px;
+          &:nth-child(1) {
+            display: none;
+          }
+        }
+      }
+      }
+    }
+  }
+}
+
+
+
+#about-blurb.c {
+  background-size: 1300px 700px;
+  background-repeat: repeat;
+  height: auto;
+  margin-top: 0;
+  z-index: -3;
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+    .inner {
+      display: flex;
+      justify-content: center;
+      margin: 100px 0;
+      @include r(1024px) {
+        flex-direction: column;
+      }
+      .content-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 100px;
+        height: 350px;
+        background-color: darken($primary, 5%);
+        width: 100%;
+        margin: 0 auto 80px;
+        transform: translateY(-100px) translateX(50px);
+        p {
+          margin: 0 25px;
+          color: $white;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 36px;
+          @include r(600px) {
+            font-size: 18px;
+            line-height: 40px;
+            &:nth-child(1) {
+              display: none;
+            }
+          }
+        }
+      }
+      .content-right {
+        transform: translateX(-50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 100px;
+        height: 350px;
+        background-color: darken($secondary, 5%);
+        width: 100%;
+        display: flex;
+      @include r(1024px) {
+        width: 100%;
+        padding: 0 5px;
+      }
+      p {
+        margin: 0 25px;
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 36px;
+        @include r(600px) {
+          font-size: 18px;
+          line-height: 40px;
+          &:nth-child(1) {
+            display: none;
+          }
+        }
+      }
+      }
+    }
+}

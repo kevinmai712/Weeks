@@ -1,0 +1,104 @@
+#internalChildHeader {
+  background: #fff;
+  height: 500px;
+  .container {
+    .inner {
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      align-items: center;
+        .headline {
+          width: 50%;
+          z-index: 3;
+          &::before {
+            -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+            z-index: -1;
+            content: '';
+            position: absolute;
+            height: 500px;
+            width: 35%;
+            left: 0;
+            top: 0px;
+            background: #f9f9f9;
+          }
+          .additional {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: $secondary;
+          }
+          h2 {
+            margin-top: 0px;
+            font-size: 60px;
+            line-height: 68px;
+            color: $headers;
+            padding-right: 20%;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 14px;
+            color: $text;
+            padding-right: 25%;
+          }
+        }
+      .internal-action {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .btn-row {
+            border-bottom: 1px solid #dfdfdf;
+            padding: 20px 0;
+            width: 300px;
+            margin: 0px auto;
+            position: relative;
+            &:last-child {
+              border: none;
+            }
+            &:hover {
+              a, i {
+                color: $secondary;
+              }
+            }
+          a {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #bfbfbf;
+            line-height: 24px;
+            i {
+              position: absolute;
+              top: 30px;
+              right: 0px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+#internalChildContent {
+  margin-top: 0px;
+  margin-bottom: 100px;
+  .container {
+    padding: 50px 0;
+    .inner {
+      p {
+        width: 65%;
+        margin: 3em auto;
+        font-weight: 400;
+        color: rgba(35, 44, 57, 0.7);
+        font-size: 1.05rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
